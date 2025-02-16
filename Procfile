@@ -1,0 +1,1 @@
+web: java -jar target/medical-recommendation-system-1.0-SNAPSHOT.jar

@@ -1,0 +1,9 @@
+com\medicalrecommendation\Helper.class
+com\medicalrecommendation\controller\MedicalRecommendationController.class
+com\medicalrecommendation\MedicalRecommendationApplication.class
+com\medicalrecommendation\Main.class
+com\medicalrecommendation\config\DroolsConfig.class
+com\medicalrecommendation\PatientList.class
+com\medicalrecommendation\dto\PatientDTO.class
+com\medicalrecommendation\model\Patient.class
+com\medicalrecommendation\service\RecommendationService.class
