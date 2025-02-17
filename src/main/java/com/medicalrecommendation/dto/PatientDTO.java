@@ -3,6 +3,10 @@ package com.medicalrecommendation.dto;
 import javax.validation.constraints.*;
 
 public class PatientDTO {
+
+    @NotNull(message = "Name is required")
+    private String name;
+
     @NotNull(message = "Gender is required")
     private String gender;
 
@@ -91,6 +95,10 @@ public class PatientDTO {
     private Integer ldl;
 
     // Getters and Setters
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    
     public String getGender() { return gender; }
     public void setGender(String gender) { this.gender = gender; }
 

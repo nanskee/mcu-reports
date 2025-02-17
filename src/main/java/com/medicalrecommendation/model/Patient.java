@@ -3,6 +3,7 @@ package com.medicalrecommendation.model;
 import java.text.DecimalFormat;
 
 public class Patient {
+    private String name;
     private String gender;
     private int age;
     private boolean pregnant;
@@ -44,7 +45,7 @@ public class Patient {
 
     // Constructors
 
-    public Patient(String gender, int age,  
+    public Patient(String name, String gender, int age,  
                    boolean pregnant, boolean alcoholConsumption, boolean smoking, 
                    int systolicPressure, int diastolicPressure, int pulse, int respiratoryRate,
                    double temperature, double weight, double height,
@@ -52,6 +53,7 @@ public class Patient {
                    double uricAcid, double glucose, 
                    double totalCholesterol, double triglyceride, int hdl, int ldl) {
         this.gender = gender;
+        this.name = name; 
         this.age = age;
         this.pregnant = pregnant;
         this.alcoholConsumption = alcoholConsumption;
@@ -76,6 +78,10 @@ public class Patient {
     }
 
     // Getters and Setters
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
     public String getGender() { return gender; }
     public void setGender(String gender) { this.gender = gender; }
 

@@ -57,6 +57,7 @@ public class MedicalRecommendationController {
 
     private Patient convertToPatient(PatientDTO dto) {
         return new Patient(
+            dto.getName(),
             dto.getGender(),
             dto.getAge(),
             dto.isPregnant(),
