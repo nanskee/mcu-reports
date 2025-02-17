@@ -9,7 +9,7 @@ public class PatientList {
 
     public List<Patient> getPatient() {
         List<Patient> patients = Arrays.asList(
-                new Patient("male", 31, false, true, true, 
+                new Patient("Nana", "male", 31, false, true, true, 
                 121, 82, 50, 
                 13, 38, 
                 50, 190, 19, 

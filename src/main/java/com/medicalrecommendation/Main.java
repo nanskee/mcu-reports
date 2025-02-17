@@ -209,7 +209,7 @@ public class Main {
         String currentDate = new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date());
     
         // Add patient information
-        addPatientDataRow2Col(table, "Nama", "[Nama Pasien]");
+        addPatientDataRow2Col(table, "Nama", patient.getName());
         addPatientDataRow2Col(table, "Merokok", smoking);
         addPatientDataRow2Col(table, "Umur", patient.getAge() + " tahun");
         addPatientDataRow2Col(table, "Tinggi Badan", patient.getHeight() + " cm");
