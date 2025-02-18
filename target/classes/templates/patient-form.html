@@ -15,22 +15,147 @@
             font-size: 0.875em;
             margin-top: 0.25rem;
         }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+            margin-top: 5rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .footer-card {
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .footer-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer-icon {
+            color: #0d6efd;
+        }
+
+        .footer-title {
+            color: #212529;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .footer-text {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .footer-link {
+            color: #0d6efd;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #0b5ed7;
+            text-decoration: underline !important;
+        }
+
+        .custom-btn {
+            background-color: #f1f4f9;
+            color: #1a1a1a;
+            font-size: 0.9rem; /* Reduced from 1.1rem */
+            font-weight: 500;
+            padding: 10px 20px; /* Reduced from 16px 28px */
+            border: none;
+            border-radius: 12px; /* Slightly smaller border radius */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+
+        .custom-btn:hover {
+            background-color: #e9ecf2;
+        }
+
+        /* Existing title style */
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+
+        /* New styles for form padding */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1px; /* Add horizontal padding */
+        }
+
+        .generate-report-btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+
+        .required-asterisk {
+            color: red;
+        }
+
+        /* Ensure footer is at the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content-wrapper {
+            flex: 1;
+        }
+        .footer {
+            background-color: #ffffff;
+            border-top: 1px solid #eaeaea;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <div class="container mt-4 mb-4">
-        <h2 class="text-center mb-4">Medical Recommendation System</h2>
+    <div class="content-wrapper container"></div>
+        <!-- Header Section with Load Sample button -->
+        <div class="form-container">
+            <!-- Header Section with Load Sample button -->
+            <div class="pt-4 px-3 d-flex justify-content-end pb-3">
+                <button type="button" class="custom-btn" onclick="loadSampleData()">
+                    Load Sample Test
+                </button>
+                <button type="button" class="custom-btn ms-2" 
+                        onclick="resetForm()" 
+                        id="backButton" 
+                        style="display: none;">
+                    Back to Form
+                </button>
+            </div>
+    
+        <!-- Two-line Title -->
+        <h1 class="text-center mb-5 main-title">
+            An eXplainable Expert System<br>
+            for Medical CheckUp Report
+        </h1>
+
+          <!-- Mandatory Fields Explanation -->
+          <div class="text-center mb-4">
+            <small class="text-danger">* Menunjukkan pertanyaan yang wajib diisi</small>
+        </div>
         
         <form th:action="@{/generate}" th:object="${patient}" method="post" class="needs-validation" novalidate>
             <!-- Basic Information -->
 
-            <div class="form-section">
+            <div class="form-section mb-4">
                 <h4 class="mb-3">Basic Information</h4>
                 <div class="row">
                     <!-- Di bagian Basic Information -->
                     <div class="row">
                         <div class="col-md-12 mb-3">
-                            <label class="form-label">Nama*</label>
+                            <label class="form-label">Nama<span class="required-asterisk">*</span></label>
                             <input type="text" th:field="*{name}" class="form-control" required/>
                             <div th:if="${#fields.hasErrors('name')}" class="error-message" 
                                 th:errors="*{name}"></div>
@@ -39,7 +164,7 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Age*</label>
+                            <label class="form-label">Age<span class="required-asterisk">*</span></label>
                             <input type="number" th:field="*{age}" class="form-control" required
                                 min="19" max="100" id="ageInput"/>
                             <div class="error-message" id="ageError" style="display: none">
@@ -48,7 +173,7 @@
                         </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Gender*</label>
+                        <label class="form-label">Gender<span class="required-asterisk">*</span></label>
                         <select th:field="*{gender}" class="form-select" required>
                             <option value="">Select gender</option>
                             <option value="male">Male</option>
@@ -82,12 +207,12 @@
             </div>
 
             <!-- Vital Signs -->
-            <div class="form-section">
+            <div class="form-section mb-4">
                 <h4 class="mb-3">Vital Signs</h4>
                 <!-- Systolic & Diastolic Pressure -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Systolic Pressure* (mmHg)</label>
+                        <label class="form-label">Systolic Pressure<span class="required-asterisk">*</span> (mmHg)</label>
                         <input type="number" th:field="*{systolicPressure}" class="form-control" required
                             min="70" max="200"/>
                         <div th:if="${#fields.hasErrors('systolicPressure')}" class="error-message" 
@@ -95,7 +220,7 @@
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Diastolic Pressure* (mmHg)</label>
+                        <label class="form-label">Diastolic Pressure<span class="required-asterisk">*</span> (mmHg)</label>
                         <input type="number" th:field="*{diastolicPressure}" class="form-control" required
                             min="40" max="130"/>
                         <div th:if="${#fields.hasErrors('diastolicPressure')}" class="error-message" 
@@ -106,7 +231,7 @@
                 <!-- Pulse & Respiratory -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Pulse* (bpm)</label>
+                        <label class="form-label">Pulse<span class="required-asterisk">*</span> (bpm)</label>
                         <input type="number" th:field="*{pulse}" class="form-control" required
                             min="40" max="200"/>
                         <div th:if="${#fields.hasErrors('pulse')}" class="error-message" 
@@ -114,7 +239,7 @@
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Respiratory Rate* (rpm)</label>
+                        <label class="form-label">Respiratory Rate<span class="required-asterisk">*</span> (rpm)</label>
                         <input type="number" th:field="*{respiratoryRate}" class="form-control" required
                             min="8" max="40"/>
                         <div th:if="${#fields.hasErrors('respiratoryRate')}" class="error-message" 
@@ -125,7 +250,7 @@
                 <!-- Weight & Height -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Weight* (kg)</label>
+                        <label class="form-label">Weight<span class="required-asterisk">*</span> (kg)</label>
                         <input type="number" step="0.1" th:field="*{weight}" class="form-control" required
                             min="20.0" max="300.0"/>
                         <div th:if="${#fields.hasErrors('weight')}" class="error-message" 
@@ -133,7 +258,7 @@
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Height* (cm)</label>
+                        <label class="form-label">Height<span class="required-asterisk">*</span> (cm)</label>
                         <input type="number" step="0.1" th:field="*{height}" class="form-control" required
                             min="100.0" max="250.0"/>
                         <div th:if="${#fields.hasErrors('height')}" class="error-message" 
@@ -144,7 +269,7 @@
                 <!-- Temperature -->
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Temperature* (°C)</label>
+                        <label class="form-label">Temperature<span class="required-asterisk">*</span> (°C)</label>
                         <input type="number" step="0.1" th:field="*{temperature}" class="form-control" required
                             min="35.0" max="42.0"/>
                         <div th:if="${#fields.hasErrors('temperature')}" class="error-message" 
@@ -155,19 +280,19 @@
                             
                             
             <!-- Laboratory Results -->
-            <div class="form-section">
+            <div class="form-section mb-4">
                 <h4 class="mb-3">Laboratory Results</h4>
                 <!-- Haemoglobin & Eosinophil -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Haemoglobin* (g/dL)</label>
+                        <label class="form-label">Haemoglobin<span class="required-asterisk">*</span> (g/dL)</label>
                         <input type="number" step="0.1" th:field="*{haemoglobin}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('haemoglobin')}" class="error-message" 
                             th:errors="*{haemoglobin}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Eosinophil* (%)</label>
+                        <label class="form-label">Eosinophil<span class="required-asterisk">*</span> (%)</label>
                         <input type="number" step="0.1" th:field="*{eosinophil}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('eosinophil')}" class="error-message" 
                             th:errors="*{eosinophil}"></div>
@@ -177,14 +302,14 @@
                 <!-- MCV & LED -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">MCV* (fL)</label>
+                        <label class="form-label">MCV<span class="required-asterisk">*</span> (fL)</label>
                         <input type="number" step="0.1" th:field="*{mcv}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('mcv')}" class="error-message" 
                             th:errors="*{mcv}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">LED* (mm/hour)</label>
+                        <label class="form-label">LED<span class="required-asterisk">*</span> (mm/hour)</label>
                         <input type="number" th:field="*{led}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('led')}" class="error-message" 
                             th:errors="*{led}"></div>
@@ -194,14 +319,14 @@
                 <!-- Uric Acid & Glucose -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Uric Acid* (mg/dL)</label>
+                        <label class="form-label">Uric Acid<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{uricAcid}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('uricAcid')}" class="error-message" 
                             th:errors="*{uricAcid}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Glucose* (mg/dL)</label>
+                        <label class="form-label">Glucose<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{glucose}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('glucose')}" class="error-message" 
                             th:errors="*{glucose}"></div>
@@ -211,14 +336,14 @@
                 <!-- Total Cholesterol & Triglyceride -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Total Cholesterol* (mg/dL)</label>
+                        <label class="form-label">Total Cholesterol<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{totalCholesterol}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('totalCholesterol')}" class="error-message" 
                             th:errors="*{totalCholesterol}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Triglyceride* (mg/dL)</label>
+                        <label class="form-label">Triglyceride<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{triglyceride}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('triglyceride')}" class="error-message" 
                             th:errors="*{triglyceride}"></div>
@@ -228,14 +353,14 @@
                 <!-- HDL & LDL -->
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">HDL* (mg/dL)</label>
+                        <label class="form-label">HDL<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" th:field="*{hdl}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('hdl')}" class="error-message" 
                             th:errors="*{hdl}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">LDL* (mg/dL)</label>
+                        <label class="form-label">LDL<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" th:field="*{ldl}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('ldl')}" class="error-message" 
                             th:errors="*{ldl}"></div>
@@ -243,11 +368,71 @@
                 </div>
             </div>
 
-        <!-- Setelah section Laboratory Results, sebelum penutup form -->
-        <div class="text-center mt-4 mb-4">
-            <button type="submit" class="btn btn-primary btn-lg">Generate Report</button>
-        </div>
+        <!-- Rest of the form content -->
+        <form th:action="@{/generate}" th:object="${patient}" method="post" class="needs-validation" novalidate>
+            <!-- Existing form sections -->
+            <div class="text-center mt-4 mb-4">
+                <button type="submit" class="btn btn-primary btn-lg generate-report-btn">Generate Report</button>
+            </div>
         </form>
+    </div>
+</div>
+    
+<!-- Updated Footer Section -->
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <!-- Developer Section -->
+            <div class="col-md-4 text-center">
+                <div class="footer-card p-4 h-100 rounded-3 bg-light">
+                    <div class="footer-icon mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h5 class="footer-title mb-2">Developer</h5>
+                    <p class="footer-text mb-0">Martina Cahya Pratiwi</p>
+                </div>
+            </div>
+
+            <!-- Expert Section -->
+            <div class="col-md-4 text-center">
+                <div class="footer-card p-4 h-100 rounded-3 bg-light">
+                    <div class="footer-icon mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                        </svg>
+                    </div>
+                    <h5 class="footer-title mb-2">Expert</h5>
+                    <p class="footer-text mb-0">Dr. Endah Indriastuti, Sp.PK</p>
+                </div>
+            </div>
+
+            <!-- Supervisor Section -->
+            <div class="col-md-4 text-center">
+                <div class="footer-card p-4 h-100 rounded-3 bg-light">
+                    <div class="footer-icon mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+                    <h5 class="footer-title mb-2">Supervisor</h5>
+                    <a href="https://www.its.ac.id/si/profil-retno-aulia-vinarti/" 
+                       target="_blank" 
+                       class="footer-link text-decoration-none">
+                        Retno Aulia Vinarti, M.Kom., Ph.D.
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="text-center mt-4 pt-4 border-top">
+            <small class="text-muted">© 2025 Medical Recommendation System. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -280,56 +465,142 @@
     </script>
 
     <!-- Di bagian paling bawah patient-form.html -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Age validation and pregnancy check
-    const ageInput = document.getElementById('ageInput');
-    const genderSelect = document.querySelector('select[name="gender"]');
-    const pregnantSection = document.getElementById('pregnantSection');
-    const ageError = document.getElementById('ageError');
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Age validation and pregnancy check
+        const ageInput = document.getElementById('ageInput');
+        const genderSelect = document.querySelector('select[name="gender"]');
+        const pregnantSection = document.getElementById('pregnantSection');
+        const ageError = document.getElementById('ageError');
 
-    function validateAge() {
-        const age = parseInt(ageInput.value);
-        if (age < 19 || age > 100) {
-            ageError.style.display = 'block';
-            ageInput.setCustomValidity('Invalid age');
-        } else {
-            ageError.style.display = 'none';
-            ageInput.setCustomValidity('');
+        function validateAge() {
+            const age = parseInt(ageInput.value);
+            if (age < 19 || age > 100) {
+                ageError.style.display = 'block';
+                ageInput.setCustomValidity('Invalid age');
+            } else {
+                ageError.style.display = 'none';
+                ageInput.setCustomValidity('');
+            }
+            checkPregnancyEligibility();
         }
-        checkPregnancyEligibility();
-    }
 
-    function checkPregnancyEligibility() {
-        const age = parseInt(ageInput.value);
-        const gender = genderSelect.value;
-        
-        if (gender === 'female' && age >= 19 && age <= 59) {
-            pregnantSection.style.display = 'block';
-        } else {
-            pregnantSection.style.display = 'none';
-            document.getElementById('pregnant').checked = false;
+        function checkPregnancyEligibility() {
+            const age = parseInt(ageInput.value);
+            const gender = genderSelect.value;
+            
+            if (gender === 'female' && age >= 19 && age <= 59) {
+                pregnantSection.style.display = 'block';
+            } else {
+                pregnantSection.style.display = 'none';
+                document.getElementById('pregnant').checked = false;
+            }
         }
-    }
 
-    ageInput.addEventListener('input', validateAge);
-    genderSelect.addEventListener('change', checkPregnancyEligibility);
+        ageInput.addEventListener('input', validateAge);
+        genderSelect.addEventListener('change', checkPregnancyEligibility);
 
-    // Form validation (kode yang sudah ada sebelumnya)
-    (function () {
-        'use strict'
-        var forms = document.querySelectorAll('.needs-validation')
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
-    })()
-</script>
+
+        function resetForm() {
+            // Reset all form fields
+            document.querySelector('form').reset();
+            
+            // Hide back button
+            document.getElementById('backButton').style.display = 'none';
+            
+            // Reset any validation states
+            document.querySelector('form').classList.remove('was-validated');
+            
+            // Reset age error if any
+            const ageError = document.getElementById('ageError');
+            if (ageError) {
+                ageError.style.display = 'none';
+            }
+            
+            // Reset pregnancy section
+            const pregnantSection = document.getElementById('pregnantSection');
+            if (pregnantSection) {
+                pregnantSection.style.display = 'none';
+            }
+        }
+
+
+        // Add this to your existing script section
+        function loadSampleData() {
+            // Sample patient data
+            const sampleData = {
+                name: "John Doe",
+                age: 35,
+                gender: "male",
+                smoking: true,
+                alcoholConsumption: false,
+                pregnant: false,
+                systolicPressure: 120,
+                diastolicPressure: 80,
+                pulse: 75,
+                respiratoryRate: 16,
+                temperature: 36.5,
+                weight: 70,
+                height: 170,
+                haemoglobin: 14.5,
+                eosinophil: 2.5,
+                mcv: 90,
+                led: 10,
+                uricAcid: 5.5,
+                glucose: 85,
+                totalCholesterol: 180,
+                triglyceride: 150,
+                hdl: 45,
+                ldl: 100
+            };
+
+            // Fill the form with sample data
+            document.querySelector('input[name="name"]').value = sampleData.name;
+            document.querySelector('input[name="age"]').value = sampleData.age;
+            document.querySelector('select[name="gender"]').value = sampleData.gender;
+            document.querySelector('input[name="smoking"]').checked = sampleData.smoking;
+            document.querySelector('input[name="alcoholConsumption"]').checked = sampleData.alcoholConsumption;
+            document.querySelector('input[name="systolicPressure"]').value = sampleData.systolicPressure;
+            document.querySelector('input[name="diastolicPressure"]').value = sampleData.diastolicPressure;
+            document.querySelector('input[name="pulse"]').value = sampleData.pulse;
+            document.querySelector('input[name="respiratoryRate"]').value = sampleData.respiratoryRate;
+            document.querySelector('input[name="temperature"]').value = sampleData.temperature;
+            document.querySelector('input[name="weight"]').value = sampleData.weight;
+            document.querySelector('input[name="height"]').value = sampleData.height;
+            document.querySelector('input[name="haemoglobin"]').value = sampleData.haemoglobin;
+            document.querySelector('input[name="eosinophil"]').value = sampleData.eosinophil;
+            document.querySelector('input[name="mcv"]').value = sampleData.mcv;
+            document.querySelector('input[name="led"]').value = sampleData.led;
+            document.querySelector('input[name="uricAcid"]').value = sampleData.uricAcid;
+            document.querySelector('input[name="glucose"]').value = sampleData.glucose;
+            document.querySelector('input[name="totalCholesterol"]').value = sampleData.totalCholesterol;
+            document.querySelector('input[name="triglyceride"]').value = sampleData.triglyceride;
+            document.querySelector('input[name="hdl"]').value = sampleData.hdl;
+            document.querySelector('input[name="ldl"]').value = sampleData.ldl;
+
+            // Trigger the gender change event to handle pregnancy field visibility
+            const event = new Event('change');
+            document.querySelector('select[name="gender"]').dispatchEvent(event);
+
+            // Show back button after loading sample
+            document.getElementById('backButton').style.display = 'inline-block';
+        }
+
+        // Form validation (kode yang sudah ada sebelumnya)
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>
