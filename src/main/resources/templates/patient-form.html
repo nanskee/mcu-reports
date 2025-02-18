@@ -124,14 +124,14 @@
         <div class="form-container">
             <!-- Header Section with Load Sample button -->
             <div class="pt-4 px-3 d-flex justify-content-end pb-3">
-                <button type="button" class="custom-btn" onclick="loadSampleData()">
-                    Load Sample Test
+                <button type="button" class="custom-btn" onclick="loadSampleData()" id="loadSampleButton">
+                    Lihat Contoh Pengisian
                 </button>
                 <button type="button" class="custom-btn ms-2" 
                         onclick="resetForm()" 
                         id="backButton" 
                         style="display: none;">
-                    Back to Form
+                    Kembali ke Formulir
                 </button>
             </div>
     
@@ -150,7 +150,7 @@
             <!-- Basic Information -->
 
             <div class="form-section mb-4">
-                <h4 class="mb-3">Basic Information</h4>
+                <h4 class="mb-3">Informasi Pasien</h4>
                 <div class="row">
                     <!-- Di bagian Basic Information -->
                     <div class="row">
@@ -164,7 +164,7 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Age<span class="required-asterisk">*</span></label>
+                            <label class="form-label">Umur<span class="required-asterisk">*</span></label>
                             <input type="number" th:field="*{age}" class="form-control" required
                                 min="19" max="100" id="ageInput"/>
                             <div class="error-message" id="ageError" style="display: none">
@@ -173,11 +173,11 @@
                         </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Gender<span class="required-asterisk">*</span></label>
+                        <label class="form-label">Jenis Kelamin<span class="required-asterisk">*</span></label>
                         <select th:field="*{gender}" class="form-select" required>
-                            <option value="">Select gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                            <option value="">Pilih jenis kelamin</option>
+                            <option value="male">Laki-laki</option>
+                            <option value="female">Perempuan</option>
                         </select>
                         <div th:if="${#fields.hasErrors('gender')}" class="error-message" 
                              th:errors="*{gender}"></div>
@@ -188,19 +188,19 @@
                     <div class="col-md-4">
                         <div class="form-check mb-3">
                             <input type="checkbox" th:field="*{smoking}" class="form-check-input" id="smoking"/>
-                            <label class="form-check-label" for="smoking">Smoking</label>
+                            <label class="form-check-label" for="smoking">Merokok</label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-check mb-3">
                             <input type="checkbox" th:field="*{alcoholConsumption}" class="form-check-input" id="alcohol"/>
-                            <label class="form-check-label" for="alcohol">Alcohol Consumption</label>
+                            <label class="form-check-label" for="alcohol">Konsumsi Alkohol</label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-check mb-3" id="pregnantSection" style="display: none;">
                             <input type="checkbox" th:field="*{pregnant}" class="form-check-input" id="pregnant"/>
-                            <label class="form-check-label" for="pregnant">Pregnant</label>
+                            <label class="form-check-label" for="pregnant">Hamil</label>
                         </div>
                     </div>
                 </div>
@@ -208,11 +208,11 @@
 
             <!-- Vital Signs -->
             <div class="form-section mb-4">
-                <h4 class="mb-3">Vital Signs</h4>
+                <h4 class="mb-3">Tanda Vital</h4>
                 <!-- Systolic & Diastolic Pressure -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Systolic Pressure<span class="required-asterisk">*</span> (mmHg)</label>
+                        <label class="form-label">Tekanan Sistolik<span class="required-asterisk">*</span> (mmHg)</label>
                         <input type="number" th:field="*{systolicPressure}" class="form-control" required
                             min="70" max="200"/>
                         <div th:if="${#fields.hasErrors('systolicPressure')}" class="error-message" 
@@ -220,7 +220,7 @@
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Diastolic Pressure<span class="required-asterisk">*</span> (mmHg)</label>
+                        <label class="form-label">Tekanan Diastolik<span class="required-asterisk">*</span> (mmHg)</label>
                         <input type="number" th:field="*{diastolicPressure}" class="form-control" required
                             min="40" max="130"/>
                         <div th:if="${#fields.hasErrors('diastolicPressure')}" class="error-message" 
@@ -231,7 +231,7 @@
                 <!-- Pulse & Respiratory -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Pulse<span class="required-asterisk">*</span> (bpm)</label>
+                        <label class="form-label">Denyut Nadi<span class="required-asterisk">*</span> (bpm)</label>
                         <input type="number" th:field="*{pulse}" class="form-control" required
                             min="40" max="200"/>
                         <div th:if="${#fields.hasErrors('pulse')}" class="error-message" 
@@ -239,7 +239,7 @@
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Respiratory Rate<span class="required-asterisk">*</span> (rpm)</label>
+                        <label class="form-label">Laju Pernafasan<span class="required-asterisk">*</span> (rpm)</label>
                         <input type="number" th:field="*{respiratoryRate}" class="form-control" required
                             min="8" max="40"/>
                         <div th:if="${#fields.hasErrors('respiratoryRate')}" class="error-message" 
@@ -250,7 +250,7 @@
                 <!-- Weight & Height -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Weight<span class="required-asterisk">*</span> (kg)</label>
+                        <label class="form-label">Berat Badan<span class="required-asterisk">*</span> (kg)</label>
                         <input type="number" step="0.1" th:field="*{weight}" class="form-control" required
                             min="20.0" max="300.0"/>
                         <div th:if="${#fields.hasErrors('weight')}" class="error-message" 
@@ -258,7 +258,7 @@
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Height<span class="required-asterisk">*</span> (cm)</label>
+                        <label class="form-label">Tinggi Badan<span class="required-asterisk">*</span> (cm)</label>
                         <input type="number" step="0.1" th:field="*{height}" class="form-control" required
                             min="100.0" max="250.0"/>
                         <div th:if="${#fields.hasErrors('height')}" class="error-message" 
@@ -269,7 +269,7 @@
                 <!-- Temperature -->
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Temperature<span class="required-asterisk">*</span> (°C)</label>
+                        <label class="form-label">Suhu<span class="required-asterisk">*</span> (°C)</label>
                         <input type="number" step="0.1" th:field="*{temperature}" class="form-control" required
                             min="35.0" max="42.0"/>
                         <div th:if="${#fields.hasErrors('temperature')}" class="error-message" 
@@ -281,18 +281,18 @@
                             
             <!-- Laboratory Results -->
             <div class="form-section mb-4">
-                <h4 class="mb-3">Laboratory Results</h4>
+                <h4 class="mb-3">Pemeriksaan Laboratorium</h4>
                 <!-- Haemoglobin & Eosinophil -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Haemoglobin<span class="required-asterisk">*</span> (g/dL)</label>
+                        <label class="form-label">Hemoglobin<span class="required-asterisk">*</span> (g/dL)</label>
                         <input type="number" step="0.1" th:field="*{haemoglobin}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('haemoglobin')}" class="error-message" 
                             th:errors="*{haemoglobin}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Eosinophil<span class="required-asterisk">*</span> (%)</label>
+                        <label class="form-label">Eosinofil<span class="required-asterisk">*</span> (%)</label>
                         <input type="number" step="0.1" th:field="*{eosinophil}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('eosinophil')}" class="error-message" 
                             th:errors="*{eosinophil}"></div>
@@ -319,14 +319,14 @@
                 <!-- Uric Acid & Glucose -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Uric Acid<span class="required-asterisk">*</span> (mg/dL)</label>
+                        <label class="form-label">Asam Urat<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{uricAcid}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('uricAcid')}" class="error-message" 
                             th:errors="*{uricAcid}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Glucose<span class="required-asterisk">*</span> (mg/dL)</label>
+                        <label class="form-label">Glukosa<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{glucose}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('glucose')}" class="error-message" 
                             th:errors="*{glucose}"></div>
@@ -336,14 +336,14 @@
                 <!-- Total Cholesterol & Triglyceride -->
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Total Cholesterol<span class="required-asterisk">*</span> (mg/dL)</label>
+                        <label class="form-label">Kolesterol Total<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{totalCholesterol}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('totalCholesterol')}" class="error-message" 
                             th:errors="*{totalCholesterol}"></div>
                     </div>
                     
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Triglyceride<span class="required-asterisk">*</span> (mg/dL)</label>
+                        <label class="form-label">Trigliserida<span class="required-asterisk">*</span> (mg/dL)</label>
                         <input type="number" step="0.1" th:field="*{triglyceride}" class="form-control" required/>
                         <div th:if="${#fields.hasErrors('triglyceride')}" class="error-message" 
                             th:errors="*{triglyceride}"></div>
@@ -372,7 +372,7 @@
         <form th:action="@{/generate}" th:object="${patient}" method="post" class="needs-validation" novalidate>
             <!-- Existing form sections -->
             <div class="text-center mt-4 mb-4">
-                <button type="submit" class="btn btn-primary btn-lg generate-report-btn">Generate Report</button>
+                <button type="submit" class="btn btn-primary btn-lg generate-report-btn">Buat Laporan MCU</button>
             </div>
         </form>
     </div>
@@ -506,6 +506,7 @@
             document.querySelector('form').reset();
             
             // Hide back button
+            document.getElementById('loadSampleButton').style.display = 'inline-block';
             document.getElementById('backButton').style.display = 'none';
             
             // Reset any validation states
@@ -584,6 +585,7 @@
 
             // Show back button after loading sample
             document.getElementById('backButton').style.display = 'inline-block';
+            document.getElementById('loadSampleButton').style.display = 'none';
         }
 
         // Form validation (kode yang sudah ada sebelumnya)
