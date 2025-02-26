@@ -382,17 +382,16 @@ public class Main {
     }
 }
 
-    private static String normalizeText(String text) {
-        return text
-            .replace("\u00e2\u20ac\u201c", "\u2013")  // Fix en-dash (â€")
-            .replace("\u00e2\u20ac\u201d", "\u2014")  // Fix em-dash (â€")
-            .replace("*", "\u2022")   // Replace asterisk with bullet point
-            .replace("\u2018", "'")   // Fix single quotes
-            .replace("\u2019", "'")   // Fix single quotes
-            .replace("\u201c", "\"") 
-            .replace("â€¢", "•")  // Fix double quotes
-            .replace("\u201d", "\""); // Fix double quotes
-    }
+private static String normalizeText(String text) {
+    return text
+    .replace("\u00e2\u20ac\u201c", "\u2013")  // Fix en-dash (â€")
+    .replace("\u00e2\u20ac\u201d", "\u2014")  // Fix em-dash (â€")
+    .replace("\u2018", "'")   // Fix single quotes
+    .replace("\u2019", "'")   // Fix single quotes
+    .replace("\u201c", "\"") 
+    .replace("â€¢", "•")  // Fix double quotes 
+    .replace("\u201d", "\"");  // Fix double quotes
+}
 
     private static void addResultRow(PdfPTable table, String label, String result, String category, Font categoryFont) {
         PdfPCell labelCell = new PdfPCell(new Phrase(label, LABEL_FONT));
