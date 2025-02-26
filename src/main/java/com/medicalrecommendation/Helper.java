@@ -7,24 +7,20 @@ public class Helper {
     //pending
     public String getBloodPressureCategory(int systolic, int diastolic) {
         // Normal
-        if (systolic < 120 && diastolic < 80) {
+        if (systolic < 130 && diastolic < 85) {
             return "Normal";
         }
         // Pra-hipertensi
-        else if ((systolic >= 120 && systolic <= 139) || (diastolic >= 80 && diastolic <= 89)) {
-            return "Pra-hipertensi";
+        else if ((systolic >= 130 && systolic <= 139) || (diastolic >= 85 && diastolic <= 89)) {
+            return "Normal-tinggi";
         }
         // Hipertensi tingkat 1
         else if ((systolic >= 140 && systolic <= 159) || (diastolic >= 90 && diastolic <= 99)) {
-            return "Hipertensi tingkat 1";
+            return "Hipertensi derajat 1";
         }
         // Hipertensi tingkat 2
         else if (systolic >= 160 || diastolic >= 100) {
-            return "Hipertensi tingkat 2";
-        }
-        // Hipertensi Sistolik Terisolasi
-        else if (systolic > 140 && diastolic < 90) {
-            return "Hipertensi Sistolik Terisolasi";
+            return "Hipertensi derajat 2";
         }
         else {
             return "Nilai yang anda masukkan tidak valid";
@@ -57,7 +53,7 @@ public class Helper {
         if (temperature >= 36.0 && temperature <= 37.5) {
             return "Normal";
         } else if (temperature >= 37.6 && temperature <= 40) {
-            return "Panas";
+            return "Demam";
         } else if (temperature > 40) {
             return "Hipertermia";
         } else {
@@ -109,7 +105,7 @@ public class Helper {
         if (eosinophil >= 0 && eosinophil <= 6) {
             return "Normal";
         } else if (eosinophil > 6) {
-            return "Abnormal";
+            return "Tinggi";
         } else {
             return "Nilai yang anda masukkan tidak valid";
         }
@@ -185,7 +181,7 @@ public class Helper {
         if (totalCholesterol < 200) {
             return "Normal";
         } else if (totalCholesterol >= 200 && totalCholesterol <= 240) {
-            return "Ambang Batas";
+            return "Borderline";
         } else if (totalCholesterol > 240) {
             return "Tinggi";
         } else {
@@ -236,9 +232,9 @@ public class Helper {
         if (ldl < 130) {
             return "Normal";
         } else if (ldl >= 130 && ldl <= 159) {
-            return "Ambang Batas";
+            return "Borderline";
         } else if (ldl > 160) {
-            return "Risiko Tinggi";
+            return "Tinggi";
         } else {
             return "Nilai yang anda masukkan tidak valid";
         }
