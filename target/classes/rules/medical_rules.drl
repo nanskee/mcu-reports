@@ -224,7 +224,7 @@ rule "Rule A13 - Blood Pressure for Subject 3 - Hipertensi tingkat 1"
             diastolicPressure >= 90 && diastolicPressure <= 99
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah meingkat menjadi >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Jika tekanan darah meningkat menjadi >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi tekanan darah tinggi dan tanda-tanda kerusakan organ pada kehamilan. Deteksi dini memungkinkan penanganan yang lebih baik guna mencegah komplikasi serius bagi ibu dan bayi.");
 end
