@@ -19,7 +19,7 @@ rule "Rule A1 - Blood Pressure for Subject 1 - Normal"
             "Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. " +
             "Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang " +
             "yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. " +
-            "Hindari stres dan pastikan tidur 7–9 jam setiap hari untuk kesehatan optimal."
+            "Hindari stres dan pastikan tidur 7-9 jam setiap hari untuk kesehatan optimal."
         );
 end
 
@@ -36,7 +36,7 @@ rule "Rule A2 - Blood Pressure for Subject 1 - Pra Hipertensi"
         )
     then
         $patient.setBloodPressureRecommendation(
-            "Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7–9 jam per hari untuk kesehatan optimal.\n\n" +
+            "Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7-9 jam per hari untuk kesehatan optimal.\n\n" +
             "---\n" +
             "Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
             "meningkatkan tekanan darah dengan menarik lebih banyak cairan ke dalam pembuluh darah, " +
@@ -108,7 +108,7 @@ rule "Rule A6 - Blood Pressure for Subject 2 - Normal"
             "Anda disarankan berolahraga ringan, seperti berjalan santai, yoga, atau senam lansia. " +
             "Batasi natrium hingga 1.500 mg per hari dan konsumsi makanan bergizi seimbang, termasuk " +
             "biji-bijian, buah, sayuran, serta produk susu rendah lemak. Asupan kalium harus sesuai " +
-            "anjuran dokter. Kelola stres dan tidur 7–9 jam per hari, termasuk tidur siang jika diperlukan."
+            "anjuran dokter. Kelola stres dan tidur 7-9 jam per hari, termasuk tidur siang jika diperlukan."
         );
 end
 
@@ -128,7 +128,7 @@ rule "Rule A7 - Blood Pressure for Subject 2 - Pra Hipertensi"
             "Anda disarankan membatasi natrium hingga 1.500 mg per hari dan mengurangi garam, " +
             "makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang, " +
             "kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, " +
-            "seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7–9 jam, " +
+            "seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7-9 jam, " +
             "dengan tidur siang jika perlu.\n\n" +
             "---\n" +
             "Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
@@ -192,7 +192,7 @@ rule "Rule A11 - Blood Pressure for Subject 3 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7–9 jam per hari, dan tambahkan istirahat jika diperlukan.");
+        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7-9 jam per hari, dan tambahkan istirahat jika diperlukan.");
 end
 
 rule "Rule A12 - Blood Pressure for Subject 3 - Pra Hipertensi"
@@ -256,7 +256,7 @@ rule "Rule A16 - Blood Pressure for Subject 4 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. Hindari stres dan pastikan tidur 7–9 jam setiap hari untuk kesehatan optimal. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. Hindari stres dan pastikan tidur 7-9 jam setiap hari untuk kesehatan optimal. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A17 - Blood Pressure for Subject 4 - Pra Hipertensi"
@@ -271,7 +271,7 @@ rule "Rule A17 - Blood Pressure for Subject 4 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7–9 jam per hari untuk kesehatan optimal. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi. \n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7-9 jam per hari untuk kesehatan optimal. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi. \n\n" +
         "---\n" +
         "  Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
         "meningkatkan tekanan darah dengan menarik lebih banyak cairan ke dalam pembuluh darah, " +
@@ -323,7 +323,7 @@ rule "Rule A21 - Blood Pressure for Subject 5 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Batasi natrium hingga 1.500 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, serta produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Kelola stres dan tidur 7–9 jam per hari, termasuk tidur siang jika diperlukan. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Batasi natrium hingga 1.500 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, serta produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Kelola stres dan tidur 7-9 jam per hari, termasuk tidur siang jika diperlukan. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A22 - Blood Pressure for Subject 5 - Pra Hipertensi"
@@ -338,7 +338,7 @@ rule "Rule A22 - Blood Pressure for Subject 5 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang, kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7–9 jam, dengan tidur siang jika perlu. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang, kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7-9 jam, dengan tidur siang jika perlu. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "  Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
         "meningkatkan tekanan darah dengan menarik lebih banyak cairan ke dalam pembuluh darah, " +
@@ -393,7 +393,7 @@ rule "Rule A26 - Blood Pressure for Subject 6 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7–9 jam per hari, dan tambahkan istirahat jika diperlukan. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7-9 jam per hari, dan tambahkan istirahat jika diperlukan. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A27 - Blood Pressure for Subject 6 - Pra Hipertensi"
@@ -457,7 +457,7 @@ rule "Rule A31 - Blood Pressure for Subject 7 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. Hindari stres dan pastikan tidur 7–9 jam setiap hari untuk kesehatan optimal. Berhenti merokok untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. Hindari stres dan pastikan tidur 7-9 jam setiap hari untuk kesehatan optimal. Berhenti merokok untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A32 - Blood Pressure for Subject 7 - Pra Hipertensi"
@@ -472,7 +472,7 @@ rule "Rule A32 - Blood Pressure for Subject 7 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7–9 jam per hari untuk kesehatan optimal. Berhenti merokok untuk mengurangi risiko hipertensi. \n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7-9 jam per hari untuk kesehatan optimal. Berhenti merokok untuk mengurangi risiko hipertensi. \n\n" +
         "---\n" +
         "  Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
         "meningkatkan tekanan darah dengan menarik lebih banyak cairan ke dalam pembuluh darah, " +
@@ -524,7 +524,7 @@ rule "Rule A36 - Blood Pressure for Subject 8 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Batasi natrium hingga 1.500 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, serta produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Kelola stres dan tidur 7–9 jam per hari, termasuk tidur siang jika diperlukan. Berhenti merokok untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Batasi natrium hingga 1.500 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, serta produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Kelola stres dan tidur 7-9 jam per hari, termasuk tidur siang jika diperlukan. Berhenti merokok untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A37 - Blood Pressure for Subject 8 - Pra Hipertensi"
@@ -539,7 +539,7 @@ rule "Rule A37 - Blood Pressure for Subject 8 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang, kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7–9 jam, dengan tidur siang jika perlu. Berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang, kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7-9 jam, dengan tidur siang jika perlu. Berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "  Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
         "meningkatkan tekanan darah dengan menarik lebih banyak cairan ke dalam pembuluh darah, " +
@@ -594,7 +594,7 @@ rule "Rule A41 - Blood Pressure for Subject 9 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7–9 jam per hari, dan tambahkan istirahat jika diperlukan. Berhenti merokok untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7-9 jam per hari, dan tambahkan istirahat jika diperlukan. Berhenti merokok untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A42 - Blood Pressure for Subject 9 - Pra Hipertensi"
@@ -658,7 +658,7 @@ rule "Rule A46 - Blood Pressure for Subject 10 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. Hindari stres dan pastikan tidur 7–9 jam setiap hari untuk kesehatan optimal. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. Hindari stres dan pastikan tidur 7-9 jam setiap hari untuk kesehatan optimal. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A47 - Blood Pressure for Subject 10 - Pra Hipertensi"
@@ -673,7 +673,7 @@ rule "Rule A47 - Blood Pressure for Subject 10 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7–9 jam per hari untuk kesehatan optimal. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?), serta mengurangi garam, makanan berpengawet, dan kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Rutin berolahraga, seperti berjalan kaki atau joging. Kelola stres dan tidur 7-9 jam per hari untuk kesehatan optimal. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "  Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
         "meningkatkan tekanan darah dengan menarik lebih banyak cairan ke dalam pembuluh darah, " +
@@ -725,7 +725,7 @@ rule "Rule A51 - Blood Pressure for Subject 11 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Batasi natrium hingga 1.500 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, serta produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Kelola stres dan tidur 7–9 jam per hari, termasuk tidur siang jika diperlukan. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Batasi natrium hingga 1.500 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, serta produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Kelola stres dan tidur 7-9 jam per hari, termasuk tidur siang jika diperlukan. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A52 - Blood Pressure for Subject 11 - Pra Hipertensi"
@@ -740,7 +740,7 @@ rule "Rule A52 - Blood Pressure for Subject 11 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang, kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7–9 jam, dengan tidur siang jika perlu. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium hingga 1.500 mg per hari(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang, kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti berjalan santai, yoga, atau senam lansia. Kelola stres dan tidur 7-9 jam, dengan tidur siang jika perlu. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "  Anda mendapat rekomendasi ini karena asupan natrium yang berlebihan dapat " +
         "meningkatkan tekanan darah dengan menarik lebih banyak cairan ke dalam pembuluh darah, " +
@@ -795,7 +795,7 @@ rule "Rule A56 - Blood Pressure for Subject 12 - Normal "
             systolicPressure < 130 && diastolicPressure < 85
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7–9 jam per hari, dan tambahkan istirahat jika diperlukan. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.");
+        $patient.setBloodPressureRecommendation("Anda disarankan berolahraga ringan, seperti berjalan kaki, prenatal yoga, atau berenang. Batasi natrium hingga 2.300 mg per hari dan konsumsi makanan bergizi seimbang, termasuk biji-bijian, buah, sayuran, dan produk susu rendah lemak. Asupan kalium harus sesuai anjuran dokter. Hindari stres, tidur 7-9 jam per hari, dan tambahkan istirahat jika diperlukan. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi.");
 end
 
 rule "Rule A57 - Blood Pressure for Subject 12 - Pra Hipertensi"
@@ -890,7 +890,7 @@ rule "Rule B2 - Pulse for Subject 1 - Normal"
             pulse >= 60 && pulse <= 100
         )
     then
-        $patient.setPulseRecommendation("Anda disarankan berkonsultasi dengan dokter jika bradikardia menimbulkan gejala, terutama pada lansia >60 tahun yang berisiko lebih tinggi. Jika menyebabkan pusing, lemas, atau pingsan, pengobatan dapat mencakup evaluasi obat(?), koreksi elektrolit(?), atau pemasangan alat pacu jantung(?).");
+        $patient.setPulseRecommendation("Anda disarankan untuk berolahraga secara rutin, mengelola stres dengan meditasi atau latihan pernapasan, serta menghindari kafein. Pertahankan berat badan sehat, tetap terhidrasi dengan cukup air, dan pastikan tidur cukup setiap malam.");
 end
 
 rule "Rule B3 - Pulse for Subject 1 - Takikardia"
@@ -2390,7 +2390,7 @@ rule "Rule E2 - BMI for Subject 1 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi.\n\n" +
         "---\n" +
         "Anda mendapatkan rekomendasi ini karena latihan beban dapat membantu meningkatkan massa otot dan merangsang nafsu makan. Latihan seperti angkat beban ringan, push-up, atau squat membantu tubuh membentuk otot, yang pada gilirannya dapat meningkatkan berat badan secara sehat.");
 end
@@ -2464,7 +2464,7 @@ rule "Rule E6 - BMI for Subject 2 - Kekurangan berat badan tingkat berat"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5–6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5-6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan.\n\n" +
         "---\n" +
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -2483,7 +2483,7 @@ rule "Rule E7 - BMI for Subject 2 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5–6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5-6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan.\n\n" +
         "---\n" +
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -2576,7 +2576,7 @@ rule "Rule E12 - BMI for Subject 3 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kekurangan berat badan tingkat ringan saat hamil bisa memengaruhi kesehatan ibu dan perkembangan janin. Asupan asam folat, zat besi, dan kalsium sangat penting untuk mendukung pertumbuhan bayi dan menjaga daya tahan tubuh ibu. Asam folat membantu pembentukan otak dan sumsum tulang belakang bayi, zat besi mencegah anemia yang dapat membuat ibu lemas, sementara kalsium menjaga kepadatan tulang serta mendukung perkembangan tulang janin.");
 end
@@ -2669,7 +2669,7 @@ rule "Rule E17 - BMI for Subject 4 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" +
         "Anda mendapatkan rekomendasi ini karena latihan beban dapat membantu meningkatkan massa otot dan merangsang nafsu makan. Latihan seperti angkat beban ringan, push-up, atau squat membantu tubuh membentuk otot, yang pada gilirannya dapat meningkatkan berat badan secara sehat.");
 end
@@ -2743,7 +2743,7 @@ rule "Rule E21 - BMI for Subject 5 - Kekurangan berat badan tingkat berat"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5–6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5-6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" +
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -2762,7 +2762,7 @@ rule "Rule E22 - BMI for Subject 5 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5–6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan. \n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5-6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan. \n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -2855,7 +2855,7 @@ rule "Rule E27 - BMI for Subject 6 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin. Berhenti merokok dan kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kekurangan berat badan tingkat ringan saat hamil bisa memengaruhi kesehatan ibu dan perkembangan janin. Asupan asam folat, zat besi, dan kalsium sangat penting untuk mendukung pertumbuhan bayi dan menjaga daya tahan tubuh ibu. Asam folat membantu pembentukan otak dan sumsum tulang belakang bayi, zat besi mencegah anemia yang dapat membuat ibu lemas, sementara kalsium menjaga kepadatan tulang serta mendukung perkembangan tulang janin.");
 end
@@ -2948,7 +2948,7 @@ rule "Rule E32 - BMI for Subject 7 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi. Berhenti merokok untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi. Berhenti merokok untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" +
         "Anda mendapatkan rekomendasi ini karena latihan beban dapat membantu meningkatkan massa otot dan merangsang nafsu makan. Latihan seperti angkat beban ringan, push-up, atau squat membantu tubuh membentuk otot, yang pada gilirannya dapat meningkatkan berat badan secara sehat.");
 end
@@ -3022,7 +3022,7 @@ rule "Rule E36 - BMI for Subject 8 - Kekurangan berat badan tingkat berat"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5–6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan. Berhenti merokok untuk mendukung pemulihan berat badan.                 \n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5-6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan. Berhenti merokok untuk mendukung pemulihan berat badan.                 \n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -3041,7 +3041,7 @@ rule "Rule E37 - BMI for Subject 8 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5–6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan. Berhenti merokok untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5-6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan. Berhenti merokok untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -3134,7 +3134,7 @@ rule "Rule E42 - BMI for Subject 9 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin. Berhenti merokok untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin. Berhenti merokok untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kekurangan berat badan tingkat ringan saat hamil bisa memengaruhi kesehatan ibu dan perkembangan janin. Asupan asam folat, zat besi, dan kalsium sangat penting untuk mendukung pertumbuhan bayi dan menjaga daya tahan tubuh ibu. Asam folat membantu pembentukan otak dan sumsum tulang belakang bayi, zat besi mencegah anemia yang dapat membuat ibu lemas, sementara kalsium menjaga kepadatan tulang serta mendukung perkembangan tulang janin.");
 end
@@ -3227,7 +3227,7 @@ rule "Rule E47 - BMI for Subject 10 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat seperti kacang, keju, atau buah kering. Lakukan latihan beban(?) untuk menambah massa otot dan nafsu makan. Jika mengalami gangguan pencernaan atau kesulitan makan, konsultasikan dengan dokter atau ahli gizi. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena latihan beban dapat membantu meningkatkan massa otot dan merangsang nafsu makan. Latihan seperti angkat beban ringan, push-up, atau squat membantu tubuh membentuk otot, yang pada gilirannya dapat meningkatkan berat badan secara sehat.");
 end
@@ -3301,7 +3301,7 @@ rule "Rule E51 - BMI for Subject 11 - Kekurangan berat badan tingkat berat"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5–6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.     .                 \n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil tetapi sering (5-6 kali sehari) dengan makanan padat kalori dan mudah dicerna, seperti alpukat, selai kacang, dan protein tinggi. Konsumsi smoothie atau milkshake bernutrisi, pilih camilan sehat seperti kacang atau buah kering. Lakukan latihan beban ringan(?) dengan pengawasan untuk menambah massa otot dan nafsu makan. Konsultasikan ke dokter untuk memeriksa kondisi medis penyebab kekurangan berat badan. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.     .                 \n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -3320,7 +3320,7 @@ rule "Rule E52 - BMI for Subject 11 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5–6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan untuk makan porsi kecil (5-6 kali sehari) dengan makanan bergizi yang mudah dicerna, seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi juga bisa membantu. Hindari minum sebelum makan, pilih camilan sehat seperti kacang atau buah kering, dan lakukan latihan beban ringan(?) untuk menambah massa otot. Konsultasikan dengan dokter atau ahli gizi jika ada masalah kesehatan atau kesulitan makan. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena latihan beban ringan dapat membantu meningkatkan massa otot, memperbaiki metabolisme, dan merangsang nafsu makan. Latihan seperti angkat beban ringan, jongkok, atau peregangan dengan karet elastis dapat dilakukan dengan pengawasan agar tetap aman dan efektif, terutama bagi lansia yang memiliki kondisi kesehatan tertentu.");
 end
@@ -3413,7 +3413,7 @@ rule "Rule E57 - BMI for Subject 12 - Kekurangan berat badan tingkat ringan"
         )
     then
         $patient.setBMI($bmi);
-        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5–6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
+        $patient.setBMIRecommendation("Anda disarankan makan porsi kecil (5-6 kali sehari) dengan makanan bergizi seperti karbohidrat kompleks, lemak sehat, protein, kacang, daging, dan produk susu full-fat. Konsumsi smoothie atau milkshake bernutrisi, hindari minum sebelum makan, dan pilih camilan sehat. Pastikan cukup asam folat(?), zat besi(?), dan kalsium(?). Jika kesulitan makan, konsultasikan dengan dokter atau ahli gizi untuk menjaga kesehatan ibu dan janin. Kurangi konsumsi alkohol untuk mendukung pemulihan berat badan.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kekurangan berat badan tingkat ringan saat hamil bisa memengaruhi kesehatan ibu dan perkembangan janin. Asupan asam folat, zat besi, dan kalsium sangat penting untuk mendukung pertumbuhan bayi dan menjaga daya tahan tubuh ibu. Asam folat membantu pembentukan otak dan sumsum tulang belakang bayi, zat besi mencegah anemia yang dapat membuat ibu lemas, sementara kalsium menjaga kepadatan tulang serta mendukung perkembangan tulang janin.");
 end
@@ -4513,7 +4513,7 @@ rule "Rule G7 - MCV for Subject 3 - Mikrositik"
         $patient : Patient(
             gender == "female" || gender == "male", 
             age <= 59, 
-            pregnant == false, 
+            pregnant == true, 
             alcoholConsumption == false,
             smoking == false,
             MCV < 80 // Bug
@@ -4639,7 +4639,7 @@ rule "Rule G16 - MCV for Subject 6 - Mikrositik"
         $patient : Patient(
             gender == "female" || gender == "male", 
             age <= 59, 
-            pregnant == false, 
+            pregnant == true, 
             alcoholConsumption == true,
             smoking == true,
             MCV < 80 // Bug
@@ -4765,7 +4765,7 @@ rule "Rule G25 - MCV for Subject 9 - Mikrositik"
         $patient : Patient(
             gender == "female" || gender == "male", 
             age <= 59, 
-            pregnant == false, 
+            pregnant == true, 
             alcoholConsumption == false,
             smoking == true,
             MCV < 80 // Bug
@@ -4891,7 +4891,7 @@ rule "Rule G34 - MCV for Subject 12 - Mikrositik"
         $patient : Patient(
             gender == "female" || gender == "male", 
             age <= 59, 
-            pregnant == false, 
+            pregnant == true, 
             alcoholConsumption == true,
             smoking == false,
             MCV < 80 // Bug
@@ -8053,7 +8053,7 @@ rule " Rule N4 - LDL for Subject 2 - Normal"
             LDL < 130 
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20–30 menit per hari sesuai kondisi. Jaga berat badan stabil dan kendalikan gula darah. Periksa kesehatan rutin untuk pemantauan lebih lanjut.");
+        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20-30 menit per hari sesuai kondisi. Jaga berat badan stabil dan kendalikan gula darah. Periksa kesehatan rutin untuk pemantauan lebih lanjut.");
 end
 
 rule " Rule N5 - LDL for Subject 2 - Ambang Batas"
@@ -8067,7 +8067,7 @@ rule " Rule N5 - LDL for Subject 2 - Ambang Batas"
             LDL >= 130 && LDL <= 159
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20–30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter.");
+        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20-30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter.");
 end
 
 rule " Rule N6 - LDL for Subject 2 - Tinggi"
@@ -8125,7 +8125,7 @@ rule " Rule N9 - LDL for Subject 3 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20–30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?).\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?).\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end
@@ -8185,7 +8185,7 @@ rule " Rule N13 - LDL for Subject 5 - Normal"
             LDL < 130 
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20–30 menit per hari sesuai kondisi. Jaga berat badan stabil dan kendalikan gula darah. Periksa kesehatan rutin untuk pemantauan lebih lanjut. Hindari merokok dan batasi alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
+        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20-30 menit per hari sesuai kondisi. Jaga berat badan stabil dan kendalikan gula darah. Periksa kesehatan rutin untuk pemantauan lebih lanjut. Hindari merokok dan batasi alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
 end
 
 rule " Rule N14 - LDL for Subject 5 - Ambang Batas"
@@ -8199,7 +8199,7 @@ rule " Rule N14 - LDL for Subject 5 - Ambang Batas"
             LDL >= 130 && LDL <= 159
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20–30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter. Hindari merokok dan batasi alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
+        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20-30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter. Hindari merokok dan batasi alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
 end
 
 rule " Rule N15 - LDL for Subject 5 - Tinggi"
@@ -8257,7 +8257,7 @@ rule " Rule N18 - LDL for Subject 6 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20–30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok dan alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok dan alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end
@@ -8317,7 +8317,7 @@ rule " Rule N22 - LDL for Subject 8 - Normal"
             LDL < 130 
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20–30 menit per hari sesuai kondisi. Jaga berat badan stabil, kendalikan gula darah, dan hindari merokok. Periksa kesehatan rutin untuk pemantauan lebih lanjut.");
+        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20-30 menit per hari sesuai kondisi. Jaga berat badan stabil, kendalikan gula darah, dan hindari merokok. Periksa kesehatan rutin untuk pemantauan lebih lanjut.");
 end
 
 rule " Rule N23 - LDL for Subject 8 - Ambang Batas"
@@ -8331,7 +8331,7 @@ rule " Rule N23 - LDL for Subject 8 - Ambang Batas"
             LDL >= 130 && LDL <= 159
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20–30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter. Hindari merokok untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
+        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20-30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter. Hindari merokok untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
 end
 
 rule " Rule N24 - LDL for Subject 8 - Tinggi"
@@ -8389,7 +8389,7 @@ rule " Rule N27 - LDL for Subject 9 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20–30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end
@@ -8449,7 +8449,7 @@ rule " Rule N31 - LDL for Subject 11 - Normal"
             LDL < 130 
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20–30 menit per hari sesuai kondisi. Jaga berat badan stabil dan kendalikan gula darah. Periksa kesehatan rutin untuk pemantauan lebih lanjut. Batasi alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
+        $patient.setLDLRecommendation("Anda disarankan menjaga pola makan sehat dengan lemak baik dari minyak zaitun, alpukat, dan kacang-kacangan. Perbanyak serat dari sayur dan buah. Batasi kolesterol dan garam untuk menjaga tekanan darah. Lakukan aktivitas ringan seperti jalan kaki 20-30 menit per hari sesuai kondisi. Jaga berat badan stabil dan kendalikan gula darah. Periksa kesehatan rutin untuk pemantauan lebih lanjut. Batasi alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
 end
 
 rule " Rule N32 - LDL for Subject 11 - Ambang Batas"
@@ -8463,7 +8463,7 @@ rule " Rule N32 - LDL for Subject 11 - Ambang Batas"
             LDL >= 130 && LDL <= 159
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20–30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter. Hindari alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
+        $patient.setLDLRecommendation("Anda disarankan membatasi makanan tinggi kolesterol seperti jeroan, kuning telur, dan susu tinggi lemak. Konsumsi lemak sehat dari minyak zaitun dan kacang-kacangan, serta serat dari sayur dan buah. Lakukan aktivitas ringan seperti jalan kaki atau senam lansia 20-30 menit per hari. Jika memiliki kondisi medis, konsultasikan dengan dokter. Hindari alkohol untuk menjaga kadar LDL tetap sehat dan melindungi jantung.");
 end
 
 rule " Rule N33 - LDL for Subject 11 - Tinggi"
@@ -8521,7 +8521,7 @@ rule " Rule N36 - LDL for Subject 12 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20–30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end
