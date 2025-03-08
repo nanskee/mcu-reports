@@ -1,9 +1,12 @@
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\controller\MedicalRecommendationController.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\model\Patient.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\Helper.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\MedicalRecommendationApplication.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\dto\PatientDTO.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\PatientList.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\service\RecommendationService.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\config\DroolsConfig.java
-C:\Users\ASUS\Documents\TA\medical-recommendation-system-web\src\main\java\com\medicalrecommendation\Main.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\config\DroolsConfig.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\MedicalRecommendationApplication.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\dto\PatientDTO.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\service\RecommendationService.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\PageTracker.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\Helper.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\model\Patient.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\controller\MedicalRecommendationController.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\Main.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\RecommendationSummarizer.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\PageReferenceOverlayHelper.java
+C:\Users\ASUS\Documents\TA\medical-recommendation-system-web-text -page -order\src\main\java\com\medicalrecommendation\PatientList.java
