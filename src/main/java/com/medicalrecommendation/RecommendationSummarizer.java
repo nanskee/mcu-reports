@@ -22,13 +22,34 @@ public class RecommendationSummarizer {
     
     // Get the API key from application.properties or application.yml
     // If not using Spring's property injection, you can set this directly
-    private static String OPENAI_API_KEY = System.getenv("OPEN_API_KEY");
+    private static String OPENAI_API_KEY = null;
     
-    // For Spring configuration, use this and remove the static field above
-    @Value("${openai.api.key:your_openai_api_key}")
+    // // For Spring configuration, use this and remove the static field above
+    // @Value("${openai.api.key:your_openai_api_key}")
+    // public void setApiKey(String apiKey) {
+    //     OPENAI_API_KEY = apiKey;
+
+    // Simple value injection without nested placeholders
+    @Value("${openai.api.key}")
     public void setApiKey(String apiKey) {
-        OPENAI_API_KEY = apiKey;
-    }
+        // First try environment variable
+        String envKey = System.getenv("OPEN_API_KEY");
+        if (envKey != null && !envKey.isEmpty()) {
+            OPENAI_API_KEY = envKey;
+            logger.info("Using API key from environment variable");
+        } 
+        // Then fall back to properties file if no env var
+        else if (apiKey != null && !apiKey.isEmpty() && !apiKey.equals("dummy-key-for-development")) {
+            OPENAI_API_KEY = apiKey;
+            logger.info("Using API key from properties file");
+        }
+        // Log warning if neither is available
+        else {
+            logger.warn("No valid API key found in environment or properties");
+        }
+
+}
+    
     
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private static final OkHttpClient client = new OkHttpClient.Builder()
