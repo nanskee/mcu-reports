@@ -22,7 +22,7 @@ public class RecommendationSummarizer {
     
     // Get the API key from application.properties or application.yml
     // If not using Spring's property injection, you can set this directly
-    private static String OPENAI_API_KEY = "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";
+    private static String OPENAI_API_KEY = System.getenv("OPEN_API_KEY");
     
     // For Spring configuration, use this and remove the static field above
     @Value("${openai.api.key:your_openai_api_key}")
