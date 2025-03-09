@@ -24,11 +24,6 @@ public class RecommendationSummarizer {
     // If not using Spring's property injection, you can set this directly
     private static String OPENAI_API_KEY = null;
     
-    // // For Spring configuration, use this and remove the static field above
-    // @Value("${openai.api.key:your_openai_api_key}")
-    // public void setApiKey(String apiKey) {
-    //     OPENAI_API_KEY = apiKey;
-
     // Simple value injection without nested placeholders
     @Value("${openai.api.key}")
     public void setApiKey(String apiKey) {
