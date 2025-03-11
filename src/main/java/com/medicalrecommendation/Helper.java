@@ -78,7 +78,6 @@ public class Helper {
     }
 
     // Laboratory Results Categories
-    // Laboratory Results Categories
     public String getHemoglobinCategory(double haemoglobin, String gender) {
         if (gender.equalsIgnoreCase("male")) {
             if (haemoglobin < 13.0) {

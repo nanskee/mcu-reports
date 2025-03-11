@@ -9,13 +9,13 @@ public class PatientList {
 
     public List<Patient> getPatient() {
         List<Patient> patients = Arrays.asList(
-                new Patient("Nana", "female", 31, false, true, false, 
-                70, 100, 110, 
-                13, 38, 
-                50, 190, 19, 
-                7, 120, 21 , 
-                3.4, 70, 
-                210, 30, 80, 170)
+                new Patient("Nana", "female", 31, true, true, true, 
+                120, 80, 70, 
+                21, 36, 
+                50, 150, 10, 
+                7, 50, 21 , 
+                8.6, 130, 
+                250, 170, 50, 140)
         );
 
         return patients;

@@ -207,7 +207,7 @@ rule "Rule A12 - Blood Pressure for Subject 3 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan).\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena kelebihan natrium dapat meningkatkan tekanan darah dan memperberat kerja ginjal, yang berisiko menyebabkan preeklampsia pada ibu hamil. Membatasi natrium membantu menjaga keseimbangan cairan dan tekanan darah, sehingga mendukung kehamilan yang sehat.");
 end
@@ -224,7 +224,7 @@ rule "Rule A13 - Blood Pressure for Subject 3 - Hipertensi tingkat 1"
             diastolicPressure >= 90 && diastolicPressure <= 99
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Jika tekanan darah meningkat menjadi >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah meingkat menjadi ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi tekanan darah tinggi dan tanda-tanda kerusakan organ pada kehamilan. Deteksi dini memungkinkan penanganan yang lebih baik guna mencegah komplikasi serius bagi ibu dan bayi.");
 end
@@ -240,7 +240,7 @@ rule "Rule A14 - Blood Pressure for Subject 3 - Hipertensi tingkat 2"
             systolicPressure >=  160 ||  diastolicPressure >=  100
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. \n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. \n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi risiko komplikasi kehamilan yang dapat menyebabkan tekanan darah tinggi, gangguan fungsi organ, dan membahayakan ibu serta janin. Pemeriksaan dini memungkinkan intervensi tepat waktu guna mencegah atau mengelola kondisi sebelum menjadi serius.");
 end
@@ -408,7 +408,7 @@ rule "Rule A27 - Blood Pressure for Subject 6 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia. Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi. \n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan). Batasi konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.  \n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena kelebihan natrium dapat meningkatkan tekanan darah dan memperberat kerja ginjal, yang berisiko menyebabkan preeklampsia pada ibu hamil. Membatasi natrium membantu menjaga keseimbangan cairan dan tekanan darah, sehingga mendukung kehamilan yang sehat.");
 end
@@ -425,7 +425,7 @@ rule "Rule A28 - Blood Pressure for Subject 6 - Hipertensi tingkat 1"
             diastolicPressure >= 90 && diastolicPressure <= 99
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Jika tekanan darah meningkat menjadi >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah meingkat menjadi ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi tekanan darah tinggi dan tanda-tanda kerusakan organ pada kehamilan. Deteksi dini memungkinkan penanganan yang lebih baik guna mencegah komplikasi serius bagi ibu dan bayi.");
 end
@@ -441,7 +441,7 @@ rule "Rule A29 - Blood Pressure for Subject 6 - Hipertensi tingkat 2"
             systolicPressure >=  160 ||  diastolicPressure >=  100
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol dan berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi risiko komplikasi kehamilan yang dapat menyebabkan tekanan darah tinggi, gangguan fungsi organ, dan membahayakan ibu serta janin. Pemeriksaan dini memungkinkan intervensi tepat waktu guna mencegah atau mengelola kondisi sebelum menjadi serius.");
 end
@@ -609,7 +609,7 @@ rule "Rule A42 - Blood Pressure for Subject 9 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia. Berhenti merokok untuk mengurangi risiko hipertensi.  \n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan). Berhenti merokok untuk mengurangi risiko hipertensi. \n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena kelebihan natrium dapat meningkatkan tekanan darah dan memperberat kerja ginjal, yang berisiko menyebabkan preeklampsia pada ibu hamil. Membatasi natrium membantu menjaga keseimbangan cairan dan tekanan darah, sehingga mendukung kehamilan yang sehat.");
 end
@@ -626,7 +626,7 @@ rule "Rule A43 - Blood Pressure for Subject 9 - Hipertensi tingkat 1"
             diastolicPressure >= 90 && diastolicPressure <= 99
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Konsumsi makanan bergizi seimbang. Jika tekanan darah meningkat menjadi >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah meingkat menjadi ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi tekanan darah tinggi dan tanda-tanda kerusakan organ pada kehamilan. Deteksi dini memungkinkan penanganan yang lebih baik guna mencegah komplikasi serius bagi ibu dan bayi.");
 end
@@ -642,7 +642,7 @@ rule "Rule A44 - Blood Pressure for Subject 9 - Hipertensi tingkat 2"
             systolicPressure >=  160 ||  diastolicPressure >=  100
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti merokok untuk mengurangi risiko hipertensi. \n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti merokok untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi risiko komplikasi kehamilan yang dapat menyebabkan tekanan darah tinggi, gangguan fungsi organ, dan membahayakan ibu serta janin. Pemeriksaan dini memungkinkan intervensi tepat waktu guna mencegah atau mengelola kondisi sebelum menjadi serius.");
 end
@@ -810,7 +810,7 @@ rule "Rule A57 - Blood Pressure for Subject 12 - Pra Hipertensi"
             diastolicPressure >= 85 && diastolicPressure <= 89
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia. Batasi konsumsi alkohol untuk mengurangi risiko hipertensi. \n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan membatasi natrium sesuai anjuran dokter(?) dan mengurangi garam, makanan berpengawet, serta kafein jika sensitif. Konsumsi makanan bergizi seimbang yang kaya serat, biji-bijian, buah, sayur, dan produk susu rendah lemak. Pilih olahraga ringan, seperti jalan santai, senam hamil, atau yoga prenatal. Kelola stres, tidur cukup, dan pantau tekanan darah untuk mencegah preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan). Batasi konsumsi alkohol untuk mengurangi risiko hipertensi. \n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena kelebihan natrium dapat meningkatkan tekanan darah dan memperberat kerja ginjal, yang berisiko menyebabkan preeklampsia pada ibu hamil. Membatasi natrium membantu menjaga keseimbangan cairan dan tekanan darah, sehingga mendukung kehamilan yang sehat.");
 end
@@ -827,7 +827,7 @@ rule "Rule A58 - Blood Pressure for Subject 12 - Hipertensi tingkat 1"
             diastolicPressure >= 90 && diastolicPressure <= 99
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Jika tekanan darah meningkat menjadi ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah meingkat menjadi ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi tekanan darah tinggi dan tanda-tanda kerusakan organ pada kehamilan. Deteksi dini memungkinkan penanganan yang lebih baik guna mencegah komplikasi serius bagi ibu dan bayi.");
 end
@@ -843,7 +843,7 @@ rule "Rule A59 - Blood Pressure for Subject 12 - Hipertensi tingkat 2"
             systolicPressure >= 160 ||  diastolicPressure >= 100
         )
     then
-        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah >= 160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
+        $patient.setBloodPressureRecommendation("Anda disarankan segera berkonsultasi dengan dokter kandungan untuk screening preeklampsia (peningkatan tekanan darah berlebih pada masa kehamilan)(?) dan penyesuaian obat antihipertensi. Batasi aktivitas berat dan lakukan gerakan ringan jika memungkinkan. Kurangi konsumsi garam dan makanan berpengawet. Konsumsi makanan bergizi seimbang. Jika tekanan darah ≥160 mmHg atau muncul nyeri kepala berat, gangguan penglihatan, nyeri ulu hati, atau kejang, segera cari pertolongan medis darurat. Berhenti konsumsi alkohol untuk mengurangi risiko hipertensi.\n\n" +
         "---\n" +
         "Anda mendapat rekomendasi ini karena screening preeklampsia penting untuk mendeteksi risiko komplikasi kehamilan yang dapat menyebabkan tekanan darah tinggi, gangguan fungsi organ, dan membahayakan ibu serta janin. Pemeriksaan dini memungkinkan intervensi tepat waktu guna mencegah atau mengelola kondisi sebelum menjadi serius.");
 end
@@ -995,7 +995,7 @@ rule "Rule B8 - Pulse for Subject 3 - Normal"
             pulse >= 60 && pulse <= 100
         )
     then
-        $patient.setPulseRecommendation("Anda disarankan berolahraga ringan seperti jalan kaki atau yoga prenatal, mengelola stres dengan meditasi atau pernapasan, serta menghindari kafein. Jaga berat badan ideal sesuai usia kehamilan, cukupi hidrasi, dan pastikan tidur cukup.");
+        $patient.setPulseRecommendation("Anda disarankan untuk berolahraga ringan, seperti jalan kaki atau yoga prenatal, serta mengelola stres melalui meditasi atau teknik pernapasan. Hindari kafein, yang dapat ditemukan dalam kopi, teh, cokelat, dan minuman bersoda, karena dapat memengaruhi kualitas tidur dan kesehatan kehamilan. Jaga berat badan ideal sesuai usia kehamilan, pastikan cukup minum untuk menjaga hidrasi, dan tidur yang cukup, yaitu 7-9 jam per malam, dengan tidur siang sekitar 30-60 menit. ");
 end
 
 rule "Rule B9 - Pulse for Subject 3 - Takikardia"
@@ -1153,7 +1153,7 @@ rule "Rule B17 - Pulse for Subject 6 - Normal"
             pulse >= 60 && pulse <= 100
         )
     then
-        $patient.setPulseRecommendation("Anda disarankan berolahraga ringan seperti jalan kaki atau yoga prenatal, mengelola stres dengan meditasi atau pernapasan, serta menghindari kafein, nikotin, dan alkohol. Jaga berat badan ideal sesuai usia kehamilan, cukupi hidrasi, dan pastikan tidur cukup.");
+        $patient.setPulseRecommendation("Anda disarankan untuk berolahraga ringan, seperti jalan kaki atau yoga prenatal, serta mengelola stres melalui meditasi atau teknik pernapasan. Hindari kafein, yang dapat ditemukan dalam kopi, teh, cokelat, dan minuman bersoda, karena dapat memengaruhi kualitas tidur dan kesehatan kehamilan. Hindari juga nikotin dan alkohol. Jaga berat badan ideal sesuai usia kehamilan, pastikan cukup minum untuk menjaga hidrasi, dan tidur yang cukup, yaitu 7-9 jam per malam, dengan tidur siang sekitar 30-60 menit. ");
 end
 
 rule "Rule B18 - Pulse for Subject 6 - Takikardia"
@@ -1311,7 +1311,7 @@ rule "Rule B26 - Pulse for Subject 9 - Normal"
             pulse >= 60 && pulse <= 100
         )
     then
-        $patient.setPulseRecommendation("Anda disarankan berolahraga ringan seperti jalan kaki atau yoga prenatal, mengelola stres dengan meditasi atau pernapasan, serta menghindari kafein dan nikotin. Jaga berat badan ideal sesuai usia kehamilan, cukupi hidrasi, dan pastikan tidur cukup.");
+        $patient.setPulseRecommendation("Anda disarankan untuk berolahraga ringan, seperti jalan kaki atau yoga prenatal, serta mengelola stres melalui meditasi atau teknik pernapasan. Hindari kafein, yang dapat ditemukan dalam kopi, teh, cokelat, dan minuman bersoda, karena dapat memengaruhi kualitas tidur dan kesehatan kehamilan. Hindari juga nikotin. Jaga berat badan ideal sesuai usia kehamilan, pastikan cukup minum untuk menjaga hidrasi, dan tidur yang cukup, yaitu 7-9 jam per malam, dengan tidur siang sekitar 30-60 menit.");
 end
 
 rule "Rule B27 - Pulse for Subject 9 - Takikardia"
@@ -1469,7 +1469,7 @@ rule "Rule B35 - Pulse for Subject 12 - Normal"
             pulse >= 60 && pulse <= 100
         )
     then
-        $patient.setPulseRecommendation("Anda disarankan berolahraga ringan seperti jalan kaki atau yoga prenatal, mengelola stres dengan meditasi atau pernapasan, serta menghindari kafein dan alkohol. Jaga berat badan ideal sesuai usia kehamilan, cukupi hidrasi, dan pastikan tidur cukup.");
+        $patient.setPulseRecommendation("Anda disarankan untuk berolahraga ringan, seperti jalan kaki atau yoga prenatal, serta mengelola stres melalui meditasi atau teknik pernapasan. Hindari kafein, yang dapat ditemukan dalam kopi, teh, cokelat, dan minuman bersoda, karena dapat memengaruhi kualitas tidur dan kesehatan kehamilan. Hindari alkohol. Jaga berat badan ideal sesuai usia kehamilan, pastikan cukup minum untuk menjaga hidrasi, dan tidur yang cukup, yaitu 7-9 jam per malam, dengan tidur siang sekitar 30-60 menit.");
 end
 
 rule "Rule B36 - Pulse for Subject 12 - Takikardia"
@@ -1527,7 +1527,7 @@ rule "Rule C1 - Combined Normal Respiratory Rate"
         )
     then
         $patient.setRespiratoryRateRecommendation(
-            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan bahan iritan lainnya seperti potongan rumput atau pollen bunga yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar.		"
+            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan penyebab iritasi lainnya seperti potongan rumput, serbuk bunga, dan senyawa kimia berbahaya (amonia, klorin, dst) yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar."
         );
 end
 
@@ -1603,7 +1603,7 @@ rule "Rule C3 - Combined Normal Respiratory Rate"
         )
     then
         $patient.setRespiratoryRateRecommendation(
-            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan bahan iritan lainnya seperti potongan rumput atau pollen bunga yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar. Jika merokok atau mengonsumsi alkohol, batasi atau hentikan untuk menjaga kesehatan paru-paru dan fungsi pernapasan. 		"
+            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan penyebab iritasi lainnya seperti potongan rumput, serbuk bunga, dan senyawa kimia berbahaya (amonia, klorin, dst) yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar. Jika merokok atau mengonsumsi alkohol, batasi atau hentikan untuk menjaga kesehatan paru-paru dan fungsi pernapasan."
         );
 end
 
@@ -1679,7 +1679,7 @@ rule "Rule C5 - Combined Normal Respiratory Rate"
         )
     then
         $patient.setRespiratoryRateRecommendation(
-            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan bahan iritan lainnya seperti potongan rumput atau pollen bunga yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar. Jika merokok, batasi atau hentikan untuk menjaga kesehatan paru-paru dan fungsi pernapasan."
+            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan penyebab iritasi lainnya seperti potongan rumput, serbuk bunga, dan senyawa kimia berbahaya (amonia, klorin, dst) yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar. Hentikan merokok untuk menjaga kesehatan paru-paru dan fungsi pernapasan."
         );
 end
 
@@ -1755,7 +1755,7 @@ rule "Rule C7 - Combined Normal Respiratory Rate"
         )
     then
         $patient.setRespiratoryRateRecommendation(
-            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan bahan iritan lainnya seperti potongan rumput atau pollen bunga yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar. Jika mengonsumsi alkohol, batasi atau hentikan untuk menjaga kesehatan paru-paru dan fungsi pernapasan."
+            "Anda disarankan untuk rutin berolahraga dan istirahat cukup.  Hindari paparan debu dan penyebab iritasi lainnya seperti potongan rumput, serbuk bunga, dan senyawa kimia berbahaya (amonia, klorin, dst) yang dapat memengaruhi saluran pernapasan. Jaga kebersihan lingkungan dan pastikan udara yang Anda hirup tetap bersih dan segar. Hentikan konsumsi alkohol untuk menjaga kesehatan paru-paru dan fungsi pernapasan."
         );
 end
 
@@ -3586,7 +3586,7 @@ rule " Rule O7 - Haemoglobin for Subject 3 - Rendah"
             smoking == false
         )
     then
-        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan profil besi dan evaluasi indeks eritrosit. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C untuk membantu penyerapannya. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter.\n\n" +
+        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan kandungan zat besi dalam darah, jumlah sel darah merah (eritrosit), dan kadar hemogrobin dalam darah. ibu hamil dianjurkan untuk mengkonsumsi tablet tambah darah setelah makan menggunakan air putih atau air jeruk secara rutin untuk menghindari anemia. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C atau buah yang mengandung vitamin C yang tinggi untuk membantu penyerapan zat besi. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter.\n\n" +
         "---\n" + 
         "Anda mendapat rekomendasi ini karena selama kehamilan, volume darah meningkat untuk mendukung pertumbuhan janin, tetapi jumlah sel darah merah tidak bertambah secepat plasma. Akibatnya, darah menjadi lebih encer (hemodilusi), sehingga kadar Hb ibu hamil secara alami lebih rendah dibanding wanita tidak hamil. Hemodilusi ini adalah mekanisme normal untuk memastikan aliran oksigen yang cukup ke janin.");
 end
@@ -3730,7 +3730,7 @@ rule " Rule O16 - Haemoglobin for Subject 6 - Rendah"
             smoking == true
         )
     then
-        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan profil besi dan evaluasi indeks eritrosit. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C untuk membantu penyerapannya. Hindari rokok dan alkohol. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter.\n\n" +
+        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan kandungan zat besi dalam darah, jumlah sel darah merah (eritrosit), dan kadar hemogrobin dalam darah. ibu hamil dianjurkan untuk mengkonsumsi tablet tambah darah setelah makan menggunakan air putih atau air jeruk secara rutin untuk menghindari anemia. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C atau buah yang mengandung vitamin C yang tinggi untuk membantu penyerapan zat besi. Hindari rokok dan alkohol. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter. \n\n" +
         "---\n" + 
         "Anda mendapat rekomendasi ini karena selama kehamilan, volume darah meningkat untuk mendukung pertumbuhan janin, tetapi jumlah sel darah merah tidak bertambah secepat plasma. Akibatnya, darah menjadi lebih encer (hemodilusi), sehingga kadar Hb ibu hamil secara alami lebih rendah dibanding wanita tidak hamil. Hemodilusi ini adalah mekanisme normal untuk memastikan aliran oksigen yang cukup ke janin.");
 end
@@ -3874,7 +3874,7 @@ rule " Rule O25 - Haemoglobin for Subject 9 - Rendah"
             smoking == true
         )
     then
-        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan profil besi dan evaluasi indeks eritrosit. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C untuk membantu penyerapannya. Hindari rokok. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter.\n\n" +
+        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan kandungan zat besi dalam darah, jumlah sel darah merah (eritrosit), dan kadar hemogrobin dalam darah. ibu hamil dianjurkan untuk mengkonsumsi tablet tambah darah setelah makan menggunakan air putih atau air jeruk secara rutin untuk menghindari anemia. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C atau buah yang mengandung vitamin C yang tinggi untuk membantu penyerapan zat besi. Hindari rokok. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter. \n\n" +
         "---\n" + 
         "Anda mendapat rekomendasi ini karena selama kehamilan, volume darah meningkat untuk mendukung pertumbuhan janin, tetapi jumlah sel darah merah tidak bertambah secepat plasma. Akibatnya, darah menjadi lebih encer (hemodilusi), sehingga kadar Hb ibu hamil secara alami lebih rendah dibanding wanita tidak hamil. Hemodilusi ini adalah mekanisme normal untuk memastikan aliran oksigen yang cukup ke janin.");
 end
@@ -4018,7 +4018,7 @@ rule " Rule O34 - Haemoglobin for Subject 12 - Rendah"
             smoking == false
         )
     then
-        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan profil besi dan evaluasi indeks eritrosit. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C untuk membantu penyerapannya. Hindari alkohol. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter.\n\n" +
+        $patient.setHaemoglobinRecommendation("Pada ibu hamil, kadar Hb memang cenderung lebih rendah(?) dibandingkan wanita yang tidak hamil. Untuk memastikan penyebab anemia, disarankan melakukan pemeriksaan kandungan zat besi dalam darah, jumlah sel darah merah (eritrosit), dan kadar hemogrobin dalam darah. ibu hamil dianjurkan untuk mengkonsumsi tablet tambah darah setelah makan menggunakan air putih atau air jeruk secara rutin untuk menghindari anemia. Perbanyak asupan zat besi dari daging merah, susu, telur, dan sayuran hijau, serta konsumsi vitamin C atau buah yang mengandung vitamin C yang tinggi untuk membantu penyerapan zat besi. Hindari alkohol. Jika diperlukan, gunakan suplemen zat besi sesuai anjuran dokter.\n\n" +
         "---\n" + 
         "Anda mendapat rekomendasi ini karena selama kehamilan, volume darah meningkat untuk mendukung pertumbuhan janin, tetapi jumlah sel darah merah tidak bertambah secepat plasma. Akibatnya, darah menjadi lebih encer (hemodilusi), sehingga kadar Hb ibu hamil secara alami lebih rendah dibanding wanita tidak hamil. Hemodilusi ini adalah mekanisme normal untuk memastikan aliran oksigen yang cukup ke janin.");
 end
@@ -4145,9 +4145,9 @@ rule "Rule F6 - Eosinophil for Subject 3 - Abnormal"
             eosinophil > 6
         )
     then
-        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi, perlu evaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi untuk mengetahui alergen pemicu spesifik. Terapkan PHBS, hentikan obat pemicu jika perlu, dan lakukan pemantauan rutin.\n\n" +
+        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi dapat membahayakan sehingga perlu dievaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi guna mengidentifikasi secara spesifik penyebab atau pemicu alergi. Terapkan PHBS (Perilaku Hidup Bersih dan Sehat), hentikan obat pemicu peningkatan eosinofil jika perlu, dan lakukan pemantauan rutin.\n\n" +
         "---\n" + 
-        "Anda mendapat rekomendasi ini karena eosinofil tinggi dapat disebabkan oleh alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
+        "Anda mendapat rekomendasi ini karena eosinofil, sel darah putih yang berfungsi sebagai sistem kekebalan tubuh, dapat meningkat akibat alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
 end
 
 rule "Rule F7 - Eosinophil for Subject 4 - Normal"
@@ -4236,9 +4236,9 @@ rule "Rule F12 - Eosinophil for Subject 6 - Abnormal"
             eosinophil > 6
         )
     then
-        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi, perlu evaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi untuk mengetahui alergen pemicu spesifik. Kurangi merokok & alkohol. Terapkan PHBS, hentikan obat pemicu jika perlu, dan lakukan pemantauan rutin.\n\n" +
+        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi dapat membahayakan sehingga perlu dievaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi guna mengidentifikasi secara spesifik penyebab atau pemicu alergi. Kurangi merokok & alkohol. Terapkan PHBS (Perilaku Hidup Bersih dan Sehat), hentikan obat pemicu peningkatan eosinofil jika perlu, dan lakukan pemantauan rutin.\n\n" +
         "---\n" + 
-        "Anda mendapat rekomendasi ini karena eosinofil tinggi dapat disebabkan oleh alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
+        "Anda mendapat rekomendasi ini karena eosinofil, sel darah putih yang berfungsi sebagai sistem kekebalan tubuh, dapat meningkat akibat alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
 end
 
 rule "Rule F13 - Eosinophil for Subject 7 - Normal"
@@ -4326,9 +4326,9 @@ rule "Rule F18 - Eosinophil for Subject 9 - Abnormal"
             eosinophil > 6
         )
     then
-        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi, perlu evaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi untuk mengetahui alergen pemicu spesifik. Kurangi merokok. Terapkan PHBS, hentikan obat pemicu jika perlu, dan lakukan pemantauan rutin.\n\n" +
+        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi dapat membahayakan sehingga perlu dievaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi guna mengidentifikasi secara spesifik penyebab atau pemicu alergi. Kurangi merokok. Terapkan PHBS (Perilaku Hidup Bersih dan Sehat), hentikan obat pemicu peningkatan eosinofil jika perlu, dan lakukan pemantauan rutin.\n\n" +
         "---\n" + 
-        "Anda mendapat rekomendasi ini karena eosinofil tinggi dapat disebabkan oleh alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
+        "Anda mendapat rekomendasi ini karena eosinofil, sel darah putih yang berfungsi sebagai sistem kekebalan tubuh, dapat meningkat akibat alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
 end
 
 rule "Rule F19 - Eosinophil for Subject 10 - Normal"
@@ -4416,9 +4416,9 @@ rule "Rule F24 - Eosinophil for Subject 12 - Abnormal"
             eosinophil > 6
         )
     then
-        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi, perlu evaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi untuk mengetahui alergen pemicu spesifik. Kurangi alkohol. Terapkan PHBS, hentikan obat pemicu jika perlu, dan lakukan pemantauan rutin.\n\n" +
+        $patient.setEosinophilRecommendation("Pada ibu hamil, peningkatan eosinofil wajar akibat perubahan sistem imun, tetapi jika sangat tinggi dapat membahayakan sehingga perlu dievaluasi lebih lanjut.  Anda disarankan untuk menentukan penyebab eosinofil tinggi melalui pemeriksaan medis, termasuk tes imunoglobulin(?), feses(?) dan alergi(?). Jika disebabkan oleh alergi atau infeksi parasit, hindari alergen pemicunya dan konsumsi obat sesuai anjuran dokter. Anda disarankan untuk melakukan tes alergi guna mengidentifikasi secara spesifik penyebab atau pemicu alergi. Kurangi alkohol. Terapkan PHBS (Perilaku Hidup Bersih dan Sehat), hentikan obat pemicu  peningkatan eosinofil jika perlu, dan lakukan pemantauan rutin.\n\n" +
         "---\n" + 
-        "Anda mendapat rekomendasi ini karena eosinofil tinggi dapat disebabkan oleh alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
+        "Anda mendapat rekomendasi ini karena eosinofil, sel darah putih yang berfungsi sebagai sistem kekebalan tubuh, dapat meningkat akibat alergi, infeksi parasit, atau gangguan imun. Pemeriksaan imunoglobulin membantu mendeteksi reaksi alergi, pemeriksaan feses berguna untuk mengidentifikasi infeksi parasit, dan tes alergi membantu mengetahui pemicu spesifik. Pemeriksaan ini penting untuk menentukan penyebab pasti dan memastikan pengobatan yang sesuai.");
 end
 
 
@@ -5413,7 +5413,7 @@ rule " Rule U9 - Uric Acid for Subject 3 - Tinggi"
             smoking == false
         )
     then
-        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisiologis. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat. ");
+        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisik. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat. ");
 end
 
 rule " Rule U10 - Uric Acid for Subject 4 - Rendah"
@@ -5536,7 +5536,7 @@ rule " Rule U18 - Uric Acid for Subject 6 - Tinggi"
             smoking == true
         )
     then
-        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisiologis. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat.  Berhenti konsumsi alkohol dan berhenti merokok karena dapat memperburuk kesehatan.");
+        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisik. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat.  Berhenti konsumsi alkohol dan berhenti merokok karena dapat memperburuk kesehatan.");
 end
 
 rule " Rule U19 - Uric Acid for Subject 7 - Rendah"
@@ -5659,7 +5659,7 @@ rule " Rule U27 - Uric Acid for Subject 9 - Tinggi"
             smoking == true
         )
     then
-        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisiologis. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat.  Berhenti merokok karena dapat memperburuk kesehatan.");
+        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisik. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat.  Berhenti merokok karena dapat memperburuk kesehatan.");
 end
 
 rule " Rule U28 - Uric Acid for Subject 10 - Rendah"
@@ -5782,7 +5782,7 @@ rule " Rule U36 - Uric Acid for Subject 9 - Tinggi"
             smoking == false
         )
     then
-        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisiologis. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat.  Berhenti konsumsi alkohol karena dapat memperburuk kesehatan.");
+        $patient.setUricAcidRecommendation("Anda disarankan menghindari makanan tinggi purin seperti jeroan, daging merah berlemak, unggas, dan seafood. Konsumsi makanan bergizi seimbang, termasuk sayuran, susu rendah lemak, buah kaya vitamin C, dan karbohidrat kompleks. Minum cukup air untuk membantu mengeluarkan asam urat. Asam urat memang lebih tinggi pada ibu hamil akibat perubahan fisik. Lakukan olahraga ringan seperti jalan kaki atau prenatal yoga. Konsultasikan dengan dokter sebelum mengonsumsi obat.  Berhenti konsumsi alkohol karena dapat memperburuk kesehatan.");
 end
 
 
@@ -5917,7 +5917,7 @@ rule " Rule J9 - Glucose for Subject 3 - Tinggi"
             glucose > 100
         )
     then
-        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula dan karbohidrat olahan, menggantinya dengan serat, protein, dan lemak sehat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional (?).\n\n" +
+        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula, seperti biskuit, minuman kemasan, dan minuman bersoda, serta karbohidrat olahan, seperti roti manis, kue kering, dan cookies. Sebagai gantinya, perbanyak asupan serat, protein, dan lemak sehat dari sayuran, buah rendah gula, kacang-kacangan, ikan, dan alpukat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Selalu periksa komposisi dan kandungan nutrisi pada makanan yang dibeli untuk menghindari gula tambahan tersembunyi. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional(?).\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar glukosa darah yang tinggi selama kehamilan dapat meningkatkan risiko diabetes gestasional. Diabetes gestasional adalah kondisi di mana tubuh tidak memproduksi cukup insulin untuk mengontrol kadar gula darah selama masa kehamilan, biasanya terjadi pada trimester kedua atau ketiga. Faktor risiko termasuk obesitas, riwayat keluarga dengan diabetes, dan tekanan darah tinggi. Kondisi ini dapat menyebabkan komplikasi seperti preeklampsia, persalinan prematur, dan bayi lahir dengan berat badan berlebih. Oleh karena itu, penting untuk memantau dan mengendalikan kadar gula darah selama kehamilan melalui pola makan sehat, olahraga teratur, dan konsultasi rutin dengan dokter.");
 end
@@ -6049,7 +6049,7 @@ rule " Rule J18 - Glucose for Subject 6 - Tinggi"
             glucose > 100
         )
     then
-        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula dan karbohidrat olahan, menggantinya dengan serat, protein, dan lemak sehat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional (?). Berhenti merokok dan batasi alkohol guna menjaga kadar glukosa stabil serta mengurangi risiko penyakit kronis.\n\n" +
+        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula, seperti biskuit, minuman kemasan, dan minuman bersoda, serta karbohidrat olahan, seperti roti manis, kue kering, dan cookies. Sebagai gantinya, perbanyak asupan serat, protein, dan lemak sehat dari sayuran, buah rendah gula, kacang-kacangan, ikan, dan alpukat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Selalu periksa komposisi dan kandungan nutrisi pada makanan yang dibeli untuk menghindari gula tambahan tersembunyi. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional(?). Berhenti merokok dan hindari alkohol guna menjaga kadar glukosa stabil serta mengurangi risiko penyakit kronis.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar glukosa darah yang tinggi selama kehamilan dapat meningkatkan risiko diabetes gestasional. Diabetes gestasional adalah kondisi di mana tubuh tidak memproduksi cukup insulin untuk mengontrol kadar gula darah selama masa kehamilan, biasanya terjadi pada trimester kedua atau ketiga. Faktor risiko termasuk obesitas, riwayat keluarga dengan diabetes, dan tekanan darah tinggi. Kondisi ini dapat menyebabkan komplikasi seperti preeklampsia, persalinan prematur, dan bayi lahir dengan berat badan berlebih. Oleh karena itu, penting untuk memantau dan mengendalikan kadar gula darah selama kehamilan melalui pola makan sehat, olahraga teratur, dan konsultasi rutin dengan dokter.");
 end
@@ -6181,7 +6181,7 @@ rule " Rule J27 - Glucose for Subject 9 - Tinggi"
             glucose > 100
         )
     then
-        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula dan karbohidrat olahan, menggantinya dengan serat, protein, dan lemak sehat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional (?). Berhenti merokok guna menjaga kadar glukosa stabil serta mengurangi risiko penyakit kronis.\n\n" +
+        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula, seperti biskuit, minuman kemasan, dan minuman bersoda, serta karbohidrat olahan, seperti roti manis, kue kering, dan cookies. Sebagai gantinya, perbanyak asupan serat, protein, dan lemak sehat dari sayuran, buah rendah gula, kacang-kacangan, ikan, dan alpukat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Selalu periksa komposisi dan kandungan nutrisi pada makanan yang dibeli untuk menghindari gula tambahan tersembunyi. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional(?). Berhenti merokok guna menjaga kadar glukosa stabil serta mengurangi risiko penyakit kronis.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar glukosa darah yang tinggi selama kehamilan dapat meningkatkan risiko diabetes gestasional. Diabetes gestasional adalah kondisi di mana tubuh tidak memproduksi cukup insulin untuk mengontrol kadar gula darah selama masa kehamilan, biasanya terjadi pada trimester kedua atau ketiga. Faktor risiko termasuk obesitas, riwayat keluarga dengan diabetes, dan tekanan darah tinggi. Kondisi ini dapat menyebabkan komplikasi seperti preeklampsia, persalinan prematur, dan bayi lahir dengan berat badan berlebih. Oleh karena itu, penting untuk memantau dan mengendalikan kadar gula darah selama kehamilan melalui pola makan sehat, olahraga teratur, dan konsultasi rutin dengan dokter.");
 end
@@ -6313,7 +6313,7 @@ rule " Rule J36 - Glucose for Subject 12 - Tinggi"
             glucose > 100
         )
     then
-        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula dan karbohidrat olahan, menggantinya dengan serat, protein, dan lemak sehat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional (?). Batasi alkohol guna menjaga kadar glukosa stabil serta mengurangi risiko penyakit kronis.\n\n" +
+        $patient.setGlucoseRecommendation("Anda direkomendasikan untuk mengurangi konsumsi makanan tinggi gula, seperti biskuit, minuman kemasan, dan minuman bersoda, serta karbohidrat olahan, seperti roti manis, kue kering, dan cookies. Sebagai gantinya, perbanyak asupan serat, protein, dan lemak sehat dari sayuran, buah rendah gula, kacang-kacangan, ikan, dan alpukat. Tetap aktif dengan aktivitas ringan sesuai anjuran dokter. Pastikan tidur cukup, kelola stres, dan cukupi kebutuhan cairan. Selalu periksa komposisi dan kandungan nutrisi pada makanan yang dibeli untuk menghindari gula tambahan tersembunyi. Jika kadar gula darah tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko diabetes gestasional(?). Batasi alkohol guna menjaga kadar glukosa stabil serta mengurangi risiko penyakit kronis.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar glukosa darah yang tinggi selama kehamilan dapat meningkatkan risiko diabetes gestasional. Diabetes gestasional adalah kondisi di mana tubuh tidak memproduksi cukup insulin untuk mengontrol kadar gula darah selama masa kehamilan, biasanya terjadi pada trimester kedua atau ketiga. Faktor risiko termasuk obesitas, riwayat keluarga dengan diabetes, dan tekanan darah tinggi. Kondisi ini dapat menyebabkan komplikasi seperti preeklampsia, persalinan prematur, dan bayi lahir dengan berat badan berlebih. Oleh karena itu, penting untuk memantau dan mengendalikan kadar gula darah selama kehamilan melalui pola makan sehat, olahraga teratur, dan konsultasi rutin dengan dokter.");
 end
@@ -6447,9 +6447,9 @@ rule " Rule K9 - Total Cholesterol for Subject 3 - Tinggi"
             totalCholesterol > 240
         )
     then
-        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisiologi(?) tubuh ibu hamil.\n\n" +
+        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisik(?) tubuh ibu hamil.\n\n" +
             "---\n" + 
-            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisiologis normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
+            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisik normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
 end
 
 rule " Rule K10 - Total Cholesterol for Subject 4 - Normal"
@@ -6575,9 +6575,9 @@ rule " Rule K18 - Total Cholesterol for Subject 6 - Tinggi"
             totalCholesterol > 240
         )
     then
-        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisiologi(?) tubuh ibu hamil. Hentikan merokok dan batasi atau hindari alkohol untuk menurunkan kolesterol dan mencegah dampaknya.\n\n" +
+        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisik(?) tubuh ibu hamil. Hentikan merokok dan batasi atau hindari alkohol untuk menurunkan kolesterol dan mencegah dampaknya.\n\n" +
             "---\n" + 
-            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisiologis normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
+            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisik normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
 end
 
 rule " Rule K19 - Total Cholesterol for Subject 7 - Normal"
@@ -6703,9 +6703,9 @@ rule " Rule K27 - Total Cholesterol for Subject 9 - Tinggi"
             totalCholesterol > 240
         )
     then
-        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisiologi(?) tubuh ibu hamil. Hentikan merokok untuk menurunkan kolesterol dan mencegah dampaknya.\n\n" +
+        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisik(?) tubuh ibu hamil. Hentikan merokok untuk menurunkan kolesterol dan mencegah dampaknya.\n\n" +
             "---\n" + 
-            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisiologis normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
+            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisik normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
 end
 
 rule " Rule K28 - Total Cholesterol for Subject 10 - Normal"
@@ -6831,9 +6831,9 @@ rule " Rule K36 - Total Cholesterol for Subject 12 - Tinggi"
             totalCholesterol > 240
         )
     then
-        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisiologi(?) tubuh ibu hamil. Hindari alkohol untuk menurunkan kolesterol dan mencegah dampaknya.\n\n" +
+        $patient.setTotalCholesterolRecommendation("Anda disarankan mengonsumsi sayuran hijau, kacang-kacangan, pisang, oat, susu rendah lemak, ikan berlemak (salmon/tuna), alpukat, dan minyak zaitun. Batasi lemak jenuh dan trans dengan menghindari gorengan, junk food, camilan kemasan, serta daging berlemak. Lakukan jalan kaki 30 menit sehari, kelola stres, dan tidur cukup. Rutin periksa kolesterol dan konsultasikan dengan dokter, karena obat penurun kolesterol umumnya tidak direkomendasikan selama kehamilan. Kolesterol pada ibu hamil lebih tinggi karena perubahan fisik(?) tubuh ibu hamil. Hindari alkohol untuk menurunkan kolesterol dan mencegah dampaknya.\n\n" +
             "---\n" + 
-            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisiologis normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
+            "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar kolesterol dalam tubuh ibu hamil cenderung meningkat. Peningkatan ini merupakan bagian dari perubahan fisik normal yang terjadi untuk mendukung perkembangan janin dan persiapan tubuh ibu dalam menyusui. Kolesterol berperan penting dalam pembentukan hormon kehamilan, seperti estrogen dan progesteron, serta dalam perkembangan otak dan sistem saraf janin. Oleh karena itu, meskipun kadar kolesterol lebih tinggi selama kehamilan, hal ini biasanya tidak perlu dikhawatirkan dan akan kembali normal setelah melahirkan.");
 end
 
 
@@ -6998,9 +6998,9 @@ rule " Rule L9 - Triglyceride for Subject 3 - Tinggi"
             smoking == false
         )
     then
-        $patient.setTriglycerideRecommendation("Anda disarankan beraktivitas ringan 30 menit sehari, mengatur asupan kalori sesuai kebutuhan, dan menghindari makanan tinggi lemak jenuh serta gula. Pilih lemak sehat seperti ikan omega-3, alpukat, dan minyak zaitun. Pastikan nutrisi cukup untuk mendukung kehamilan. Trigliserida cenderung lebih tinggi pada wanita hamil akibat perubahan fisiologi (?) pada tubuh ibu hamil. Jika kadar sangat tinggi, konsultasikan ke dokter untuk mencegah risiko komplikasi.\n\n" +
+        $patient.setTriglycerideRecommendation("Trigliserida cenderung meningkat pada ibu hamil akibat perubahan fisik(?) dalam tubuh. Jika kadar trigliserida sangat tinggi, dapat meningkatkan risiko komplikasi, sehingga penting untuk mengelolanya dengan baik. Anda disarankan untuk beraktivitas ringan selama 30 menit sehari, seperti jalan kaki, berenang, atau senam hamil. Atur asupan kalori sesuai kebutuhan dan hindari makanan tinggi lemak jenuh serta gula. Sebagai gantinya, pilih lemak sehat dari sumber seperti ikan beromega-3, alpukat, dan minyak zaitun. Pastikan asupan nutrisi cukup untuk mendukung kehamilan, dengan kebutuhan kalori ibu hamil berkisar antara 1.800–2.500 kalori per hari, tergantung usia kehamilan dan kondisi tubuh. Jika kadar trigliserida tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko komplikasi lebih lanjut.\n\n" +
         "---\n" + 
-        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisiologis, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
+        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisik, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
 end
 
 rule " Rule L10 - Triglyceride for Subject 4 - Rendah"
@@ -7151,9 +7151,9 @@ rule " Rule L18 - Triglyceride for Subject 6 - Tinggi"
             smoking == true
         )
     then
-        $patient.setTriglycerideRecommendation("Anda disarankan beraktivitas ringan 30 menit sehari, mengatur asupan kalori sesuai kebutuhan, dan menghindari makanan tinggi lemak jenuh serta gula. Pilih lemak sehat seperti ikan omega-3, alpukat, dan minyak zaitun. Pastikan nutrisi cukup untuk mendukung kehamilan. Trigliserida cenderung lebih tinggi pada wanita hamil akibat perubahan fisiologi (?) pada tubuh ibu hamil. Jika kadar sangat tinggi, konsultasikan ke dokter untuk mencegah risiko komplikasi. Hindari merokok dan alkohol karena dapat memperburuk kadar trigliserida.\n\n" +
+        $patient.setTriglycerideRecommendation("Trigliserida cenderung meningkat pada ibu hamil akibat perubahan fisik(?) dalam tubuh. Jika kadar trigliserida sangat tinggi, dapat meningkatkan risiko komplikasi, sehingga penting untuk mengelolanya dengan baik. Anda disarankan untuk beraktivitas ringan selama 30 menit sehari, seperti jalan kaki, berenang, atau senam hamil. Atur asupan kalori sesuai kebutuhan dan hindari makanan tinggi lemak jenuh serta gula. Sebagai gantinya, pilih lemak sehat dari sumber seperti ikan beromega-3, alpukat, dan minyak zaitun. Pastikan asupan nutrisi cukup untuk mendukung kehamilan, dengan kebutuhan kalori ibu hamil berkisar antara 1.800–2.500 kalori per hari, tergantung usia kehamilan dan kondisi tubuh. Jika kadar trigliserida tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko komplikasi lebih lanjut.  Hindari merokok dan alkohol karena dapat memperburuk kadar trigliserida. \n\n" +
         "---\n" + 
-        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisiologis, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
+        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisik, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
 end
 
 rule " Rule L19 - Triglyceride for Subject 7 - Rendah"
@@ -7304,9 +7304,9 @@ rule " Rule L27 - Triglyceride for Subject 9 - Tinggi"
             smoking == true
         )
     then
-        $patient.setTriglycerideRecommendation("Anda disarankan beraktivitas ringan 30 menit sehari, mengatur asupan kalori sesuai kebutuhan, dan menghindari makanan tinggi lemak jenuh serta gula. Pilih lemak sehat seperti ikan omega-3, alpukat, dan minyak zaitun. Pastikan nutrisi cukup untuk mendukung kehamilan. Trigliserida cenderung lebih tinggi pada wanita hamil akibat perubahan fisiologi (?) pada tubuh ibu hamil. Jika kadar sangat tinggi, konsultasikan ke dokter untuk mencegah risiko komplikasi. Hindari merokok karena dapat memperburuk kadar trigliserida. \n\n" +
+        $patient.setTriglycerideRecommendation("Trigliserida cenderung meningkat pada ibu hamil akibat perubahan fisik(?) dalam tubuh. Jika kadar trigliserida sangat tinggi, dapat meningkatkan risiko komplikasi, sehingga penting untuk mengelolanya dengan baik. Anda disarankan untuk beraktivitas ringan selama 30 menit sehari, seperti jalan kaki, berenang, atau senam hamil. Atur asupan kalori sesuai kebutuhan dan hindari makanan tinggi lemak jenuh serta gula. Sebagai gantinya, pilih lemak sehat dari sumber seperti ikan beromega-3, alpukat, dan minyak zaitun. Pastikan asupan nutrisi cukup untuk mendukung kehamilan, dengan kebutuhan kalori ibu hamil berkisar antara 1.800–2.500 kalori per hari, tergantung usia kehamilan dan kondisi tubuh. Jika kadar trigliserida tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko komplikasi lebih lanjut.  Hindari merokok karena dapat memperburuk kadar trigliserida. \n\n" +
         "---\n" + 
-        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisiologis, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
+        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisik, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
 end
 
 rule " Rule L28 - Triglyceride for Subject 10 - Rendah"
@@ -7453,9 +7453,9 @@ rule " Rule L36 - Triglyceride for Subject 12 - Tinggi"
             smoking == false
         )
     then
-        $patient.setTriglycerideRecommendation("Anda disarankan beraktivitas ringan 30 menit sehari, mengatur asupan kalori sesuai kebutuhan, dan menghindari makanan tinggi lemak jenuh serta gula. Pilih lemak sehat seperti ikan omega-3, alpukat, dan minyak zaitun. Pastikan nutrisi cukup untuk mendukung kehamilan. Trigliserida cenderung lebih tinggi pada wanita hamil akibat perubahan fisiologi (?) pada tubuh ibu hamil. Jika kadar sangat tinggi, konsultasikan ke dokter untuk mencegah risiko komplikasi. Hindari alkohol karena dapat memperburuk kadar trigliserida.\n\n" +
+        $patient.setTriglycerideRecommendation("Trigliserida cenderung meningkat pada ibu hamil akibat perubahan fisik(?) dalam tubuh. Jika kadar trigliserida sangat tinggi, dapat meningkatkan risiko komplikasi, sehingga penting untuk mengelolanya dengan baik. Anda disarankan untuk beraktivitas ringan selama 30 menit sehari, seperti jalan kaki, berenang, atau senam hamil. Atur asupan kalori sesuai kebutuhan dan hindari makanan tinggi lemak jenuh serta gula. Sebagai gantinya, pilih lemak sehat dari sumber seperti ikan beromega-3, alpukat, dan minyak zaitun. Pastikan asupan nutrisi cukup untuk mendukung kehamilan, dengan kebutuhan kalori ibu hamil berkisar antara 1.800–2.500 kalori per hari, tergantung usia kehamilan dan kondisi tubuh. Jika kadar trigliserida tetap tinggi, segera konsultasikan dengan dokter untuk mencegah risiko komplikasi lebih lanjut.  Hindari alkohol karena dapat memperburuk kadar trigliserida.\n\n" +
         "---\n" + 
-        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisiologis, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
+        "Anda mendapatkan rekomendasi ini karena selama kehamilan, kadar trigliserida cenderung meningkat akibat perubahan fisik, seperti peningkatan produksi hormon dan perubahan metabolisme lemak, yang bertujuan mendukung pertumbuhan janin. Namun, jika kadar trigliserida meningkat secara berlebihan, hal ini dapat meningkatkan risiko komplikasi seperti pankreatitis akut dan gangguan kardiovaskular. Oleh karena itu, penting untuk memantau dan mengelola kadar trigliserida selama kehamilan.");
 end
 
 
@@ -7579,7 +7579,7 @@ rule " Rule M8 - HDL for Subject 3 - Normal"
             HDL >= 30 && HDL <= 70
         )
     then
-        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari ikan, kacang-kacangan, dan minyak zaitun. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter.");
+        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari sumber yang mudah ditemukan, seperti alpukat, kacang-kacangan (kacang tanah, almond, kenari, mede), ikan berlemak (salmon, tuna, sarden), telur, serta minyak sehat seperti minyak zaitun dan minyak kelapa. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter.");
 end
 
 rule " Rule M9 - HDL for Subject 3 - Tinggi"
@@ -7711,7 +7711,7 @@ rule " Rule M17 - HDL for Subject 6 - Normal"
             HDL >= 30 && HDL <= 70
         )
     then
-        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari ikan, kacang-kacangan, dan minyak zaitun. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter. Hindari rokok dan alkohol karena bisa merusak pembuluh darah dan mengganggu perkembangan janin.");
+        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari sumber yang mudah ditemukan, seperti alpukat, kacang-kacangan (kacang tanah, almond, kenari, mede), ikan berlemak (salmon, tuna, sarden), telur, serta minyak sehat seperti minyak zaitun dan minyak kelapa. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter. Hindari rokok dan alkohol karena bisa merusak pembuluh darah dan mengganggu perkembangan janin.");
 end
 
 rule " Rule M18 - HDL for Subject 6 - Tinggi"
@@ -7843,7 +7843,7 @@ rule " Rule M26 - HDL for Subject 9 - Normal"
             HDL >= 30 && HDL <= 70
         )
     then
-        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari ikan, kacang-kacangan, dan minyak zaitun. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter. Hindari rokok karena bisa merusak pembuluh darah dan mengganggu perkembangan janin.");
+        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari sumber yang mudah ditemukan, seperti alpukat, kacang-kacangan (kacang tanah, almond, kenari, mede), ikan berlemak (salmon, tuna, sarden), telur, serta minyak sehat seperti minyak zaitun dan minyak kelapa. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter. Hindari rokok karena bisa merusak pembuluh darah dan mengganggu perkembangan janin.");
 end
 
 rule " Rule M27 - HDL for Subject 9 - Tinggi"
@@ -7976,7 +7976,7 @@ rule " Rule M35 - HDL for Subject 12 - Normal"
             HDL >= 30 && HDL <= 70
         )
     then
-        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari ikan, kacang-kacangan, dan minyak zaitun. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter. Hindari alkohol karena bisa merusak pembuluh darah dan mengganggu perkembangan janin.");
+        $patient.setHDLRecommendation("Anda disarankan untuk mempertahankan pola makan sehat dengan lemak baik dari sumber yang mudah ditemukan, seperti alpukat, kacang-kacangan (kacang tanah, almond, kenari, mede), ikan berlemak (salmon, tuna, sarden), telur, serta minyak sehat seperti minyak zaitun dan minyak kelapa. Lakukan olahraga ringan seperti jalan kaki atau senam hamil. Hindari lemak trans dan makanan olahan. Tetap rutin memantau kesehatan kehamilan melalui kontrol ke dokter. Hindari alkohol karena bisa merusak pembuluh darah dan mengganggu perkembangan janin.");
 end
 
 rule " Rule M36 - HDL for Subject 12 - Tinggi"
@@ -8125,7 +8125,7 @@ rule " Rule N9 - LDL for Subject 3 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?).\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan untuk mengurangi makanan yang tinggi lemak jenuh dan kolesterol, seperti susu full cream, keju, daging berlemak, santan, dan gorengan, karena dapat meningkatkan kadar trigliserida. Sebagai gantinya, perbanyak asupan serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki selama 20–30 menit sehari. Pastikan melakukan pemantauan rutin dan konsultasi dengan dokter(?).\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end
@@ -8257,7 +8257,7 @@ rule " Rule N18 - LDL for Subject 6 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok dan alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20–30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok dan alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end
@@ -8389,7 +8389,7 @@ rule " Rule N27 - LDL for Subject 9 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20–30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari merokok karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end
@@ -8521,7 +8521,7 @@ rule " Rule N36 - LDL for Subject 12 - Tinggi"
             LDL >= 160
         )
     then
-        $patient.setLDLRecommendation("Anda disarankan mengurangi makanan berlemak jenuh dan tinggi kolesterol, serta memperbanyak serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki 20-30 menit sehari. Lakukan pemantauan rutin dan konsultasi dokter(?). Hindari alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
+        $patient.setLDLRecommendation("Anda disarankan untuk mengurangi makanan yang tinggi lemak jenuh dan kolesterol, seperti susu full cream, keju, daging berlemak, santan, dan gorengan, karena dapat meningkatkan kadar trigliserida. Sebagai gantinya, perbanyak asupan serat dari sayur, buah, dan gandum. Konsumsi lemak sehat dari ikan berlemak, alpukat, dan minyak zaitun untuk mendukung kesehatan ibu dan janin. Lakukan olahraga ringan seperti jalan kaki selama 20–30 menit sehari. Pastikan melakukan pemantauan rutin dan konsultasi dengan dokter(?). Hindari alkohol karena dapat memperburuk kadar LDL dan meningkatkan risiko penyakit jantung.\n\n" +
         "---\n" + 
         "Anda mendapatkan rekomendasi ini karena kadar LDL yang tinggi pada ibu hamil dapat meningkatkan risiko komplikasi kehamilan, seperti preeklamsia dan gangguan pembuluh darah. Konsultasi dokter diperlukan untuk menentukan langkah penanganan yang aman, seperti perubahan pola makan, olahraga yang sesuai, atau pengobatan jika diperlukan. Pemantauan rutin membantu menjaga kesehatan ibu dan janin.");
 end

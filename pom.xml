@@ -26,6 +26,8 @@
         <slf4j.version>1.7.32</slf4j.version>
         <jena.version>4.5.0</jena.version>
         <itext.version>5.5.13.2</itext.version>
+        <okhttp.version>4.10.0</okhttp.version>
+        <json.version>20231013</json.version>
     </properties>
 
     <dependencies>
@@ -101,6 +103,18 @@
             <groupId>com.itextpdf</groupId>
             <artifactId>itextpdf</artifactId>
             <version>${itext.version}</version>
+        </dependency>
+
+        <!-- OpenAI Integration Dependencies -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${json.version}</version>
         </dependency>
 
         <!-- Testing -->
