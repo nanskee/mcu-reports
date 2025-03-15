@@ -178,7 +178,7 @@
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <label class="form-label">Nama<span class="required-asterisk">*</span></label>
-                            <input type="text" th:field="*{name}" class="form-control" required/>
+                            <input type="text" th:field="*{name}" class="form-control" required id="nameInput" />
                             <div th:if="${#fields.hasErrors('name')}" class="error-message" 
                                 th:errors="*{name}"></div>
                         </div>
@@ -391,7 +391,8 @@
             </div>
 
         <!-- Rest of the form content -->
-        <form th:action="@{/generate}" th:object="${patient}" method="post" class="needs-validation" novalidate>
+        <form th:action="@{/generate}" th:object="${patient}" method="post" class="needs-validation" novalidate
+            onsubmit="return validateForm(event);">
             <!-- Existing form sections -->
             <div class="text-center mt-4 mb-4">
                 <button type="submit" class="btn btn-primary btn-lg generate-report-btn">Buat Laporan MCU</button>
@@ -671,6 +672,50 @@
         }
         });
 
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get name and age inputs by ID
+        const nameInput = document.getElementById('nameInput');
+        const ageInput = document.getElementById('ageInput');
+        
+        // Add Enter key handler to name input
+        if (nameInput && ageInput) {
+            nameInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    ageInput.focus();
+                }
+            });
+        }
+        
+        // Apply the same validation behavior for the form
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                const requiredFields = form.querySelectorAll('[required]');
+                let allFieldsFilled = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        allFieldsFilled = false;
+                        field.classList.add('is-invalid');
+                    } else {
+                        field.classList.remove('is-invalid');
+                    }
+                });
+                
+                if (!allFieldsFilled) {
+                    event.preventDefault();
+                    
+                    // Focus on the first empty field
+                    const firstEmptyField = Array.from(requiredFields).find(field => !field.value.trim());
+                    if (firstEmptyField) {
+                        firstEmptyField.focus();
+                    }
+                }
+            });
+        }
+    });
+
         // Form validation (kode yang sudah ada sebelumnya)
         (function () {
             'use strict'
@@ -686,6 +731,77 @@
                     }, false)
                 })
         })()
+
+        function validateForm(event) {
+        const form = event.target;
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('is-invalid');
+            } else {
+                field.classList.remove('is-invalid');
+            }
+        });
+        
+        if (!isValid) {
+            // Focus on the first empty field
+            const firstEmptyField = Array.from(requiredFields).find(field => !field.value.trim());
+            if (firstEmptyField) {
+                firstEmptyField.focus();
+            }
+            form.classList.add('was-validated');
+            return false;
+        }
+        
+        return true;
+    }
+
+        // Add this script at the very end of your body tag
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get the name input element directly
+        const nameInput = document.getElementById('nameInput');
+        const ageInput = document.getElementById('ageInput');
+        
+        if (nameInput && ageInput) {
+            // Remove any existing event listeners (if possible)
+            nameInput.setAttribute('onkeydown', '');
+            
+            // Add a new, direct event listener
+            nameInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                console.log('Enter key pressed on name field');
+                // Stop the event from propagating
+                event.stopPropagation();
+                // Prevent the default action (form submission)
+                event.preventDefault();
+                // Focus the age input
+                setTimeout(function() {
+                ageInput.focus();
+                }, 0);
+                return false;
+            }
+            }, true); // Use capturing phase to intercept the event before it bubbles
+            
+            console.log('Enter key handler added to name input');
+        } else {
+            console.error('Name input or age input not found:', 
+                        nameInput ? 'Name input found' : 'Name input NOT found', 
+                        ageInput ? 'Age input found' : 'Age input NOT found');
+        }
+
+        // Additionally, prevent form submission on Enter for this field
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.target === nameInput) {
+                e.preventDefault();
+                return false;
+            }
+            }, true);
+        });
+});
     </script>
 </body>
 </html>
