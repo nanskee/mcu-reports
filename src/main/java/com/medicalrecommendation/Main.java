@@ -497,89 +497,120 @@ public class Main {
     // New method to add the summary section
     // Modifications to the addSummarySection method in Main.java
 
-private static void addSummarySection(Document document, Patient patient, Helper helper) throws DocumentException {
-    // Header for the summary section
-    Paragraph summaryTitle = new Paragraph("Rangkuman Rekomendasi", SECTION_FONT);
-    summaryTitle.setSpacingBefore(15);
-    summaryTitle.setSpacingAfter(20);
-    document.add(summaryTitle);
-    
-    // Check if any parameters are outside normal range
-    @SuppressWarnings("unused")
-    List<RecommendationSummarizer.RecommendationItem> abnormalItems = 
-        RecommendationSummarizer.generateSummary(patient, helper);
-    
-    // Get the comprehensive recommendation - regardless of normal or abnormal status
-    String comprehensiveRecommendation = RecommendationSummarizer.generateComprehensiveRecommendation(patient, helper);
-    
-    // Create container for recommendation content
-    PdfPTable table = new PdfPTable(1);
-    table.setWidthPercentage(100);
-    table.setSpacingAfter(10);
-    
-    PdfPCell cell = new PdfPCell();
-    cell.setPadding(12);
-    cell.setBorderColor(BORDER_COLOR);
-    
-    // Format recommendation text with improved header styling
-    Paragraph recommendationParagraph = new Paragraph();
-    recommendationParagraph.setLeading(14f); // Line spacing
-    
-    // Parse the comprehensive recommendation by lines for better formatting
-    String[] lines = comprehensiveRecommendation.split("\n");
-    boolean isFirstLine = true;
-    
-    for (int i = 0; i < lines.length; i++) {
-        String line = lines[i];
+    private static void addSummarySection(Document document, Patient patient, Helper helper) throws DocumentException {
+        // Header for the summary section
+        Paragraph summaryTitle = new Paragraph("Rangkuman Rekomendasi", SECTION_FONT);
+        summaryTitle.setSpacingBefore(15);
+        summaryTitle.setSpacingAfter(20);
+        document.add(summaryTitle);
         
-        // Skip empty lines
-        if (line.trim().isEmpty()) {
-            continue;
-        }
+        // Add AI disclaimer warning at the top in a bordered box with background color
+        PdfPTable disclaimerTable = new PdfPTable(1);
+        disclaimerTable.setWidthPercentage(100);
+        disclaimerTable.setSpacingAfter(15);
         
-        // Check if this is a category header (e.g., "1. Pola Makan dan Nutrisi:")
-        if (line.matches("\\d+\\. [^:]+:.*")) {
-            // Add spacing before all category headers except the first one
-            if (!isFirstLine) {
-                recommendationParagraph.add(Chunk.NEWLINE);
+        PdfPCell disclaimerCell = new PdfPCell();
+        disclaimerCell.setPadding(8);
+        disclaimerCell.setBorderColor(new BaseColor(220, 53, 69)); // Red border for warning
+        disclaimerCell.setBorderWidth(1.5f);
+        disclaimerCell.setBackgroundColor(new BaseColor(255, 243, 243)); // Light red background
+        
+        // Create a composite paragraph with different styles
+        Paragraph disclaimerParagraph = new Paragraph();
+        
+        // Add warning symbol and red "PERINGATAN" text
+        Font warningFont = new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD, new BaseColor(180, 0, 0)); // Bold red text
+        Chunk warningChunk = new Chunk("⚠️PERINGATAN: ", warningFont);
+        disclaimerParagraph.add(warningChunk);
+        
+        // Add the rest of the text in black
+        Font normalFont = new Font(Font.FontFamily.HELVETICA, 10, Font.NORMAL, BaseColor.BLACK);
+        Chunk normalChunk = new Chunk(
+            "Rangkuman ini dibuat secara otomatis oleh sistem berbasis kecerdasan buatan (AI) untuk memberikan gambaran umum atas hasil medical check-up Anda. " +
+            "Untuk keakuratan, selalu baca detail setiap hasil pemeriksaan pada halaman-halaman selanjutnya.", 
+            normalFont);
+        disclaimerParagraph.add(normalChunk);
+        
+        disclaimerCell.addElement(disclaimerParagraph);
+        disclaimerTable.addCell(disclaimerCell);
+        document.add(disclaimerTable);
+        
+        // Check if any parameters are outside normal range
+        @SuppressWarnings("unused")
+        List<RecommendationSummarizer.RecommendationItem> abnormalItems = 
+            RecommendationSummarizer.generateSummary(patient, helper);
+        
+        // Get the comprehensive recommendation - regardless of normal or abnormal status
+        String comprehensiveRecommendation = RecommendationSummarizer.generateComprehensiveRecommendation(patient, helper);
+        
+        // Create container for recommendation content
+        PdfPTable table = new PdfPTable(1);
+        table.setWidthPercentage(100);
+        table.setSpacingAfter(10);
+        
+        PdfPCell cell = new PdfPCell();
+        cell.setPadding(12);
+        cell.setBorderColor(BORDER_COLOR);
+        
+        // Format recommendation text with improved header styling
+        Paragraph recommendationParagraph = new Paragraph();
+        recommendationParagraph.setLeading(14f); // Line spacing
+        
+        // Parse the comprehensive recommendation by lines for better formatting
+        String[] lines = comprehensiveRecommendation.split("\n");
+        boolean isFirstLine = true;
+        
+        for (int i = 0; i < lines.length; i++) {
+            String line = lines[i];
+            
+            // Skip empty lines
+            if (line.trim().isEmpty()) {
+                continue;
             }
-            isFirstLine = false;
             
-            // This is a category header - format with larger, colored font
-            Font categoryFont = new Font(Font.FontFamily.HELVETICA, 13, Font.BOLD, PRIMARY_COLOR);
-            Paragraph categoryPara = new Paragraph(line, categoryFont);
-            categoryPara.setSpacingAfter(5);
-            recommendationParagraph.add(categoryPara);
-            
-            // If there's content on the next line, add it
-            if (i + 1 < lines.length && !lines[i + 1].trim().isEmpty() && !lines[i + 1].matches("\\d+\\. [^:]+:.*")) {
+            // Check if this is a category header (e.g., "1. Pola Makan dan Nutrisi:")
+            if (line.matches("\\d+\\. [^:]+:.*")) {
+                // Add spacing before all category headers except the first one
+                if (!isFirstLine) {
+                    recommendationParagraph.add(Chunk.NEWLINE);
+                }
+                isFirstLine = false;
+                
+                // This is a category header - format with larger, colored font
+                Font categoryFont = new Font(Font.FontFamily.HELVETICA, 13, Font.BOLD, PRIMARY_COLOR);
+                Paragraph categoryPara = new Paragraph(line, categoryFont);
+                categoryPara.setSpacingAfter(5);
+                recommendationParagraph.add(categoryPara);
+                
+                // If there's content on the next line, add it
+                if (i + 1 < lines.length && !lines[i + 1].trim().isEmpty() && !lines[i + 1].matches("\\d+\\. [^:]+:.*")) {
+                    Font contentFont = new Font(Font.FontFamily.HELVETICA, 11, Font.NORMAL, BaseColor.BLACK);
+                    Paragraph contentPara = new Paragraph(lines[i + 1], contentFont);
+                    contentPara.setIndentationLeft(10); // Indent content under headers
+                    recommendationParagraph.add(contentPara);
+                    i++; // Skip the next line since we've already processed it
+                }
+            } else {
+                // Regular content text
                 Font contentFont = new Font(Font.FontFamily.HELVETICA, 11, Font.NORMAL, BaseColor.BLACK);
-                Paragraph contentPara = new Paragraph(lines[i + 1], contentFont);
+                Paragraph contentPara = new Paragraph(line, contentFont);
                 contentPara.setIndentationLeft(10); // Indent content under headers
                 recommendationParagraph.add(contentPara);
-                i++; // Skip the next line since we've already processed it
             }
-        } else {
-            // Regular content text
-            Font contentFont = new Font(Font.FontFamily.HELVETICA, 11, Font.NORMAL, BaseColor.BLACK);
-            Paragraph contentPara = new Paragraph(line, contentFont);
-            contentPara.setIndentationLeft(10); // Indent content under headers
-            recommendationParagraph.add(contentPara);
         }
+        
+        cell.addElement(recommendationParagraph);
+        table.addCell(cell);
+        document.add(table);
+        
+        // Add note at the bottom
+        Font noteFont = new Font(Font.FontFamily.HELVETICA, 9, Font.ITALIC, SECONDARY_COLOR);
+        Paragraph note = new Paragraph("Catatan: Untuk detail lengkap dari setiap indikator, silakan lihat halaman-halaman berikutnya.", 
+            noteFont);
+        note.setSpacingBefore(5);
+        note.setSpacingAfter(15);
+        document.add(note);
     }
-    
-    cell.addElement(recommendationParagraph);
-    table.addCell(cell);
-    document.add(table);
-    
-    // Add note at the bottom
-    Font noteFont = new Font(Font.FontFamily.HELVETICA, 9, Font.ITALIC, SECONDARY_COLOR);
-    Paragraph note = new Paragraph("Catatan: Untuk detail lengkap dari setiap indikator, silakan lihat halaman-halaman berikutnya.", 
-        noteFont);
-    note.setSpacingBefore(5);
-    note.setSpacingAfter(15);
-    document.add(note);
-}
 
     
     private static void addIndicatorSection(Object target, String indicator, String result, 
