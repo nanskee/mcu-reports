@@ -199,7 +199,7 @@ public class Helper {
             } else if (triglyceride <= 135) {
                 return "Normal";
             } else {
-                return "Tinggi";
+                return "High";
             }
         } else if (gender.equalsIgnoreCase("female")) {
             if (triglyceride < 40) {
