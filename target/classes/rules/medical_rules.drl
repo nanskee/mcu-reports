@@ -16,10 +16,10 @@ rule "Rule A1 - Blood Pressure for Subject 1 - Normal"
         )
     then
         $patient.setBloodPressureRecommendation(
-            "Anda disarankan untuk rutin berolahraga, seperti berjalan kaki, joging, atau berenang. " +
-            "Batasi konsumsi natrium hingga 2.300 mg per hari, serta konsumsi makanan bergizi seimbang " +
-            "yang kaya biji-bijian, buah, sayuran, produk susu rendah lemak, dan kalium dalam jumlah cukup. " +
-            "Hindari stres dan pastikan tidur 7-9 jam setiap hari untuk kesehatan optimal."
+            "You are advised to exercise regularly, such as walking, jogging, or swimming." +
+            "Limit sodium intake to 2,300 mg per day and consume a well-balanced, nutritious diet rich in " +
+            "grains, fruits, vegetables, low-fat dairy products, and adequate amounts of potassium. " +
+            "Minimize stress and aim for 7–9 hours of sleep daily to maintain optimal health."
         );
 end
 
@@ -890,7 +890,7 @@ rule "Rule B2 - Pulse for Subject 1 - Normal"
             pulse >= 60 && pulse <= 100
         )
     then
-        $patient.setPulseRecommendation("Anda disarankan untuk berolahraga secara rutin, mengelola stres dengan meditasi atau latihan pernapasan, serta menghindari kafein. Pertahankan berat badan sehat, tetap terhidrasi dengan cukup air, dan pastikan tidur cukup setiap malam.");
+        $patient.setPulseRecommendation("You are advised to exercise regularly, manage stress through meditation or breathing exercises, and avoid caffeine. Maintain a healthy weight, stay hydrated by drinking enough water, and ensure sufficient sleep each night.");
 end
 
 rule "Rule B3 - Pulse for Subject 1 - Takikardia"
