@@ -245,7 +245,7 @@ public class Main {
         // Hospital Name dengan warna yang lebih jelas
         Paragraph hospitalName = new Paragraph();
         Font hospitalNameFont = new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD, PRIMARY_COLOR);
-        hospitalName.add(new Phrase("MAHKOTA MEDICAL CENTRE\n", hospitalNameFont));
+        hospitalName.add(new Phrase("MITRA MEDICAL CENTRE\n", hospitalNameFont));
         hospitalName.setSpacingAfter(3);
         hospitalName.setAlignment(Element.ALIGN_LEFT); // Center aligned
     
@@ -255,15 +255,15 @@ public class Main {
         
         // Gunakan satu baris dengan spacing yang lebih baik
         hospitalAddress.add(new Phrase(
-            "No. 3, Mahkota Melaka, Jalan Merdeka, 75000 Melaka  |  ", addressFont));
+            "No. 3, Mitra Bandung, Jalan Merdeka, 75000 Bandung  |  ", addressFont));
         hospitalAddress.add(new Phrase(
-            "Tel: +606 285 2999  |  Fax: +606 281 0560", addressFont));
+            "Tel: +607 286 2994  |  Fax: +656 283 0565", addressFont));
         hospitalAddress.setAlignment(Element.ALIGN_LEFT); // Center aligned
         
         // Satu baris untuk website dan email
         Paragraph contactInfo = new Paragraph();
         contactInfo.add(new Phrase(
-            "www.mahkotamedical.com  |  info@mahkotamedical.com", addressFont));
+            "www.mitramedical.com  |  info@mitramedical.com", addressFont));
         contactInfo.setAlignment(Element.ALIGN_LEFT); // Center aligned
                 
         hospitalCell.addElement(hospitalName);
@@ -275,7 +275,7 @@ public class Main {
         // Title dengan desain yang lebih baik
         Paragraph title = new Paragraph();
         Font titleFont = new Font(Font.FontFamily.HELVETICA, 16, Font.BOLD, PRIMARY_COLOR);
-        title.add(new Chunk("LAPORAN HASIL PEMERIKSAAN KESEHATAN", titleFont));
+        title.add(new Chunk("MEDICAL CHECK-UP REPORT", titleFont));
         title.setAlignment(Element.ALIGN_CENTER);
         title.setSpacingBefore(3);
         title.setSpacingAfter(5);
@@ -321,20 +321,20 @@ public class Main {
         String currentDate = new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date());
     
         // Add patient information dengan format yang lebih baik
-        addImprovePatientDataRow2Col(table, "Nama", patient.getName());
-        addImprovePatientDataRow2Col(table, "Merokok", smoking);
-        addImprovePatientDataRow2Col(table, "Umur", patient.getAge() + " tahun");
-        addImprovePatientDataRow2Col(table, "Tinggi Badan", patient.getHeight() + " cm");
-        addImprovePatientDataRow2Col(table, "Jenis Kelamin", gender);
-        addImprovePatientDataRow2Col(table, "Berat Badan", patient.getWeight() + " kg");
+        addImprovePatientDataRow2Col(table, "Name", patient.getName());
+        addImprovePatientDataRow2Col(table, "Smoking", smoking);
+        addImprovePatientDataRow2Col(table, "Age", patient.getAge() + " tahun");
+        addImprovePatientDataRow2Col(table, "Body Height", patient.getHeight() + " cm");
+        addImprovePatientDataRow2Col(table, "Gender", gender);
+        addImprovePatientDataRow2Col(table, "Body Weight", patient.getWeight() + " kg");
     
         // Add pregnancy status for females dengan gaya yang konsisten
-        if (gender.equals("Perempuan")) {
-            addImprovePatientDataRowFullWidth(table, "Hamil", pregnant);
+        if (gender.equals("Female")) {
+            addImprovePatientDataRowFullWidth(table, "Pregancy Status", pregnant);
         }
         
-        addImprovePatientDataRow2Col(table, "Konsumsi Alkohol", alcohol);
-        addImprovePatientDataRow2Col(table, "Tanggal Pemeriksaan", currentDate);
+        addImprovePatientDataRow2Col(table, "Alcohol Consumption", alcohol);
+        addImprovePatientDataRow2Col(table, "Date of Examination", currentDate);
         
         document.add(table);
 
@@ -499,7 +499,7 @@ public class Main {
 
     private static void addSummarySection(Document document, Patient patient, Helper helper) throws DocumentException {
         // Header for the summary section
-        Paragraph summaryTitle = new Paragraph("Rangkuman Rekomendasi", SECTION_FONT);
+        Paragraph summaryTitle = new Paragraph("Summary of Recommendations", SECTION_FONT);
         summaryTitle.setSpacingBefore(15);
         summaryTitle.setSpacingAfter(20);
         document.add(summaryTitle);
@@ -520,14 +520,14 @@ public class Main {
         
         // Add warning symbol and red "PERINGATAN" text
         Font warningFont = new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD, new BaseColor(180, 0, 0)); // Bold red text
-        Chunk warningChunk = new Chunk("⚠️PERINGATAN: ", warningFont);
+        Chunk warningChunk = new Chunk("⚠️WARNING: ", warningFont);
         disclaimerParagraph.add(warningChunk);
         
         // Add the rest of the text in black
         Font normalFont = new Font(Font.FontFamily.HELVETICA, 10, Font.NORMAL, BaseColor.BLACK);
         Chunk normalChunk = new Chunk(
-            "Rangkuman ini dibuat secara otomatis oleh sistem berbasis kecerdasan buatan (AI) untuk memberikan gambaran umum atas hasil medical check-up Anda. " +
-            "Untuk keakuratan, selalu baca detail setiap hasil pemeriksaan pada halaman-halaman selanjutnya.", 
+            "This summary was automatically generated by an artificial intelligence (AI)-based system to provide an overview of your medical check-up results." +
+            "For accuracy, always review the detailed recommendations for each examination result on the following pages. These recommendations are based on interviews with clinical pathologists.", 
             normalFont);
         disclaimerParagraph.add(normalChunk);
         
@@ -1001,7 +1001,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     headerCell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
     headerCell1.setMinimumHeight(22);
     
-    PdfPCell headerCell2 = new PdfPCell(new Phrase("Nilai Normal", headerFont));
+    PdfPCell headerCell2 = new PdfPCell(new Phrase("Reference Range", headerFont));
     headerCell2.setBackgroundColor(PRIMARY_COLOR);
     headerCell2.setPadding(6);
     headerCell2.setBorderColor(BORDER_COLOR);
@@ -1009,7 +1009,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     headerCell2.setVerticalAlignment(Element.ALIGN_MIDDLE);
     headerCell2.setMinimumHeight(22);
     
-    PdfPCell headerCell3 = new PdfPCell(new Phrase("Hasil", headerFont));
+    PdfPCell headerCell3 = new PdfPCell(new Phrase("Result", headerFont));
     headerCell3.setBackgroundColor(PRIMARY_COLOR);
     headerCell3.setPadding(6);
     headerCell3.setBorderColor(BORDER_COLOR);
@@ -1017,7 +1017,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     headerCell3.setVerticalAlignment(Element.ALIGN_MIDDLE);
     headerCell3.setMinimumHeight(22);
     
-    PdfPCell headerCell4 = new PdfPCell(new Phrase("Kategori", headerFont));
+    PdfPCell headerCell4 = new PdfPCell(new Phrase("Category", headerFont));
     headerCell4.setBackgroundColor(PRIMARY_COLOR);
     headerCell4.setPadding(6);
     headerCell4.setBorderColor(BORDER_COLOR);
@@ -1025,7 +1025,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     headerCell4.setVerticalAlignment(Element.ALIGN_MIDDLE);
     headerCell4.setMinimumHeight(22);
     
-    PdfPCell headerCell5 = new PdfPCell(new Phrase("Hal.", headerFont));
+    PdfPCell headerCell5 = new PdfPCell(new Phrase("Page", headerFont));
     headerCell5.setBackgroundColor(PRIMARY_COLOR);
     headerCell5.setPadding(6);
     headerCell5.setBorderColor(BORDER_COLOR);
@@ -1043,7 +1043,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     Font categoryHeaderFont = new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, SECONDARY_COLOR);
     
     // TANDA VITAL category header
-    PdfPCell vitalSignsCategoryCell = new PdfPCell(new Phrase("TANDA VITAL", categoryHeaderFont));
+    PdfPCell vitalSignsCategoryCell = new PdfPCell(new Phrase("VITAL SIGNS", categoryHeaderFont));
     vitalSignsCategoryCell.setColspan(5);
     vitalSignsCategoryCell.setBackgroundColor(LIGHT_BG_COLOR);
     vitalSignsCategoryCell.setPadding(5);
@@ -1053,38 +1053,38 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     table.addCell(vitalSignsCategoryCell);
     
     // Add vital signs rows with dynamic page numbers (default to 2 if not found)
-    addImproveSummaryRow(table, "Tekanan Darah (mmHg)", 
+    addImproveSummaryRow(table, "Blood Pressure (mmHg)", 
         "90/60 - 120/80", 
         patient.getSystolicPressure() + "/" + patient.getDiastolicPressure(),
         helper.getBloodPressureCategory(patient.getSystolicPressure(), patient.getDiastolicPressure()),
         pageNumberMap.getOrDefault("Tekanan Darah", 2));
     
-    addImproveSummaryRow(table, "Denyut Nadi (bpm)", 
+    addImproveSummaryRow(table, "Pulse Rate (bpm)", 
         "60 - 100", 
         String.valueOf(patient.getPulse()),
         helper.getPulseCategory(patient.getPulse()),
-        pageNumberMap.getOrDefault("Denyut Nadi", 2));
+        pageNumberMap.getOrDefault("Pulse Rate", 2));
     
-    addImproveSummaryRow(table, "Laju Pernafasan (rpm)", 
+    addImproveSummaryRow(table, "Respiratory Rat (rpm)", 
         "12 - 20", 
         String.valueOf(patient.getRespiratoryRate()),
         helper.getRespiratoryCategory(patient.getRespiratoryRate()),
-        pageNumberMap.getOrDefault("Laju Pernafasan", 3));
+        pageNumberMap.getOrDefault("Respiratory Rat", 3));
     
-    addImproveSummaryRow(table, "Suhu (°C)", 
+    addImproveSummaryRow(table, "Temperature (°C)", 
         "36 - 37.5", 
         String.valueOf(patient.getTemperature()),
         helper.getTemperatureCategory(patient.getTemperature()),
-        pageNumberMap.getOrDefault("Suhu", 3));
+        pageNumberMap.getOrDefault("Temperature", 3));
     
-    addImproveSummaryRow(table, "Indeks Massa Tubuh (kg/m²)", 
+    addImproveSummaryRow(table, "Body Mass Index (kg/m²)", 
         "18.5 - 25", 
         String.valueOf(patient.getBMI()),
         helper.getBMICategory(patient.getBMI()),
-        pageNumberMap.getOrDefault("Indeks Massa Tubuh", 4));
+        pageNumberMap.getOrDefault("Body Mass Index", 4));
     
     // HASIL LABORATORIUM category header
-    PdfPCell labResultsCategoryCell = new PdfPCell(new Phrase("HASIL LABORATORIUM", categoryHeaderFont));
+    PdfPCell labResultsCategoryCell = new PdfPCell(new Phrase("LABORATORY RESULTS", categoryHeaderFont));
     labResultsCategoryCell.setColspan(5);
     labResultsCategoryCell.setBackgroundColor(LIGHT_BG_COLOR);
     labResultsCategoryCell.setPadding(5);
@@ -1112,35 +1112,35 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
         helper.getMCVCategory(patient.getMCV()),
         pageNumberMap.getOrDefault("MCV", 7));
     
-    addImproveSummaryRow(table, "Laju Endap Darah (LED) (mm/jam)", 
+    addImproveSummaryRow(table, "ESR (mm/hour)", 
         patient.getGender().equalsIgnoreCase("male") ? "< 15" : "< 20", 
         String.valueOf(patient.getLED()),
         helper.getLEDCategory(patient.getLED(), patient.getGender()),
-        pageNumberMap.getOrDefault("Laju Endap Darah (LED)", 7));
+        pageNumberMap.getOrDefault("ESR", 7));
     
-    addImproveSummaryRow(table, "Asam Urat (mg/dL)", 
+    addImproveSummaryRow(table, "Uric Acid (mg/dL)", 
         patient.getGender().equalsIgnoreCase("male") ? "3.6 - 8.5" : "2.3 - 6.6", 
         String.valueOf(patient.getUricAcid()),
         helper.getUricAcidCategory(patient.getUricAcid(), patient.getGender()),
-        pageNumberMap.getOrDefault("Asam Urat", 8));
+        pageNumberMap.getOrDefault("Uric Acid", 8));
     
-    addImproveSummaryRow(table, "Glukosa (mg/dL)", 
+    addImproveSummaryRow(table, "Glucose (mg/dL)", 
         "70 - 100", 
         String.valueOf(patient.getGlucose()),
         helper.getGlucoseCategory(patient.getGlucose()),
-        pageNumberMap.getOrDefault("Glukosa", 8));
+        pageNumberMap.getOrDefault("Glucose", 8));
     
-    addImproveSummaryRow(table, "Kolesterol Total (mg/dL)", 
+    addImproveSummaryRow(table, "Total Cholesterol (mg/dL)", 
         "< 200", 
         String.valueOf(patient.getTotalCholesterol()),
         helper.getTotalCholesterolCategory(patient.getTotalCholesterol()),
-        pageNumberMap.getOrDefault("Kolesterol Total", 9));
+        pageNumberMap.getOrDefault("Total Cholesterol", 9));
     
-    addImproveSummaryRow(table, "Trigliserida (mg/dL)", 
+    addImproveSummaryRow(table, "Triglyceride (mg/dL)", 
         patient.getGender().equalsIgnoreCase("male") ? "35 - 135" : "40 - 160", 
         String.valueOf(patient.getTriglyceride()),
         helper.getTriglycerideCategory(patient.getTriglyceride(), patient.getGender()),
-        pageNumberMap.getOrDefault("Trigliserida", 9));
+        pageNumberMap.getOrDefault("Triglyceride", 9));
     
     addImproveSummaryRow(table, "HDL (mg/dL)", 
         "30 - 70", 
@@ -1159,7 +1159,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     
     // Footer note
     Font noteFont = new Font(Font.FontFamily.HELVETICA, 7, Font.ITALIC, SECONDARY_COLOR);
-    Paragraph notePara = new Paragraph("Catatan: Halaman merujuk pada detail rekomendasi untuk setiap parameter", 
+    Paragraph notePara = new Paragraph("This page refers to detailed recommendations for each parameter.", 
         noteFont);
     notePara.setSpacingBefore(2);
     notePara.setSpacingAfter(5);
@@ -1170,7 +1170,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     // Modified addVitalSigns method - now accepts PageReferenceOverlayHelper
     private static void addVitalSigns(Document document, Patient patient, Helper helper, PageReferenceOverlayHelper pageHelper) throws DocumentException {
     // Create a table to keep title and first vital sign together
-    Paragraph sectionTitle = new Paragraph("Tanda Vital", SECTION_FONT);
+    Paragraph sectionTitle = new Paragraph("Vital Signs", SECTION_FONT);
     PdfPTable containerTable = new PdfPTable(1);
     containerTable.setWidthPercentage(100);
     containerTable.setKeepTogether(true);
@@ -1189,7 +1189,7 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     
     // Blood Pressure
     addIndicatorSection(bpCell,
-    "Tekanan Darah",
+    "Blood Pressure",
     patient.getSystolicPressure() + "/" + patient.getDiastolicPressure(),
     helper.getBloodPressureCategory(patient.getSystolicPressure(), patient.getDiastolicPressure()),
     "90/60 - 120/80",
@@ -1201,18 +1201,18 @@ private static void addSummaryTableWithPageNumbers(Document document, Patient pa
     document.add(containerTable);
     
     // Record page number for Tekanan Darah
-    pageHelper.setParameterPage("Tekanan Darah", document.getPageNumber());
+    pageHelper.setParameterPage("Pulse Rate", document.getPageNumber());
 
     // Pulse
     addIndicatorSection(document,
-        "Denyut Nadi",
+        "Pulse Rate",
         String.valueOf(patient.getPulse()),
         helper.getPulseCategory(patient.getPulse()),
         "60 - 100",
         "bpm",
         patient.getPulseRecommendation()
     );
-    pageHelper.setParameterPage("Denyut Nadi", document.getPageNumber());
+    pageHelper.setParameterPage("Pulse Rate", document.getPageNumber());
 
     // Respiratory Rate
     addIndicatorSection(document,

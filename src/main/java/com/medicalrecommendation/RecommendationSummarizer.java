@@ -334,7 +334,7 @@ public class RecommendationSummarizer {
         }
 
          // Buat prompt untuk OpenAI dengan format yang diperbarui
-         String prompt = "Buatkan rangkuman rekomendasi medis komprehensif berdasarkan rekomendasi-rekomendasi individual dari hasil pemeriksaan pasien. "
+         String prompt = "Buatkan rangkuman rekomendasi medis komprehensif DALAM BAHASA INGGRIS YANG MUDAH DIPAHAMI OLEH ORANG AWAM FULL TEXT berdasarkan rekomendasi-rekomendasi individual dari hasil pemeriksaan pasien. "
          + "Organisasikan rekomendasi ke dalam kategori berikut dengan batasan yang SANGAT KETAT:\n\n"
          + "FORMAT OUTPUT SANGAT PENTING:\n"
          + "1. Setiap kategori HARUS diformat sebagai header dengan format '[NOMOR]. [NAMA KATEGORI]:'\n"
